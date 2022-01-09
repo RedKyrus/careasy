@@ -4,14 +4,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!--메타-->
+    <meta name="description" content="HTML meta tag page">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/common.js"> </script>
     <title>Careasy</title>
   </head>
-  <body>
-    <header class="header">헤더</header>
-    <div class="test">드래s<img src="/img/gulp-intro.png" alt="이미지"></div>
-    <div class="test02">노멤버</div>
-    <script src="js/main.js"></script>
-    <footer class="footer">푸터</footer>
+  <body class="body">
+    <div class="wrap">
+      <div class="top-ad"><img src="" alt=""></div>
+      <header class="header"> 
+        <div class="header-container">
+          <div class="header-logo"><a href="#"><img src="" alt="탑로고"></a></div>
+          <nav class="top-menu-content">
+            <ul class="top-menu-ul">
+              <li>카이지렌터카!</li>
+              <li>즉시출고차량</li>
+              <li>이달의 특가차량</li>
+              <li>고객후기</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="wrap-container page-main">
+        <section class="sect sect-intro">
+          <div class="sect-container">
+            <div class="intro-content">
+              <div class="intro-main"><img src="" alt="메인 이미지"></div>
+              <form class="in-info-content">
+                <p class="info-title">부담없이 렌터카 견적 받아보세요!</p>
+                <div class="in-info-area">
+                  <input class="in-name" type="text" placeholder="이    름"/>
+                  <input class="in-phone" type="tel" placeholder="연 락 처"/>
+                  <input class="in-carype in-cartype01" type="text" placeholder="관심차종 1"/>
+                  <input class="in-cartype02" type="text" placeholder="관심차종 2"/>
+                  <input class="in-cartype03" type="text" placeholder="관심차종 3"/>
+                </div>
+                <button class="btn-car-quote" type="button">간편견적신청</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="sect sect-release">
+          <div class="sect-container">
+            <div class="title-area">
+              <p class="titleMain">즉시출고차량</p>
+              <p class="titleSub">차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!</p>
+            </div>
+          </div>
+        </section>
+        <section class="sect sect-ad-middle">
+          <div class="sect-container"><img src="" alt="광고 이미지"></div>
+        </section>
+        <section class="sect sect-special">
+          <div class="sect-container">
+            <div class="title-area">
+              <p class="titleMain">이달의 특가차량</p>
+              <p class="titleSub">이달의 특거로 저렴하게 렌트할 수 있는 차량!</p>
+            </div>
+          </div>
+        </section>
+        <section class="sect sect-youtube">
+          <div class="sect-container">
+            <div class="title-area">
+              <p class="title-main"><img src="" alt="유튜브 제목"></p>
+              <p class="title-sub">유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.</p>
+            </div>
+            <div class="youtube-contents"></div>
+            <ul> 
+              <li> </li>
+              <li> </li>
+            </ul>
+          </div>
+        </section>
+        <section class="sect sect-review">
+          <div class="sect-container">
+            <div class="title-area">
+              <p class="titleMain">고객후기</p>
+              <p class="titleSub">실제 구매하신 고객님들의 찐후기입니다</p>
+            </div>
+          </div>
+        </section>
+        <section class="sect sect-partner">
+          <div class="sect-container"></div>
+        </section>
+        <section class="sect sect-ad-bottom"></section>
+      </main>
+      <script src="../static/js/main.js"></script>
+      <scritt></scritt>
+      <footer class="footer"> 
+        <div class="footer-logo"><img src="" alt="로고"></div>
+        <div class="footer-info"> 
+          <div class="copy-text-cont">
+            <div>회사면</div>
+            <p> </p>
+            <p class="copyright">copyright &copy careasyCorp.All rights reserved.</p>
+          </div>
+          <div class="footer-snsicon-cont">
+            <ul>
+              <li>카톡</li>
+              <li>블로그</li>
+              <li>유튜브</li>
+              <li>인스타그램</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

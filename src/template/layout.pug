@@ -4,11 +4,19 @@ html(lang="ko")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="css/style.css")
+    //메타
+    meta(name="description" content="HTML meta tag page")
+
+    link(rel="stylesheet", href="static/css/style.css")
+    script(src="static/js/common.js") 
     title Careasy
-  body
-    include ../include/header
 
-    block content
+  body(class="body")
+    div(class="wrap")
+      include ../include/topAd
 
-    include ../include/footer
+      include ../include/header
+
+      block content
+
+      include ../include/footer

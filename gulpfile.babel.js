@@ -5,6 +5,7 @@ import del from "del";
 import ws from "gulp-webserver";
 import image from "gulp-image";
 import sourcemaps from "gulp-sourcemaps"
+import gIf from "gulp-if";
 import miniCSS from "gulp-csso";
 import removSoucemaps from "gulp-remove-sourcemaps";
 
@@ -38,26 +39,27 @@ import browserSync from "browser-sync";
 //https://github.com/gulpjs/glob-parent
 //https://github.com/isaacs/node-glob
 
+
 const routes = {
     pug: {
         watch: "src/**/*.pug",
-        src: ["src/**/*.pug", "!src/@(include|template)/*.pug",],
+        src: ["src/pages/**/*.pug", "!src/@(include|template)/*.pug",],
         dest: "build/"
     },
     img: {
-        watch: "src/img/**/*",
-        src: "src/img/**/*",
-        dest: "build/img/"
+        watch: "src/assets/img/**/*",
+        src: "src/assets/img/**/*",
+        dest: "build/static/img/"
     },
     scss: {
-        watch: "src/scss/**/*.scss",
-        src: "src/scss/**/*.scss",
-        dest: "build/css/"
+        watch: "src/assets/scss/**/*.scss",
+        src: "src/assets/scss/**/*.scss",
+        dest: "build/static/css/"
     },
     js: {
-        watch:"src/**/*.js",
-        src:"src/js/**/!(_)*.js",
-        dest:"build/js/"
+        watch:"src/assets/**/*.js",
+        src:"src/assets/js/**/!(_)*.js",
+        dest:"build/static/js/"
     }
 }
 
@@ -74,12 +76,13 @@ const img = () =>
 
 const scss = () =>
     gulp.src(routes.scss.src)
-        .pipe(sourcemaps.init())
-        .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(sourcemaps.write())
-        //.pipe(miniCSS({ sourcemaps: true }))
-        .pipe(gulp.dest(routes.scss.dest));
+    .pipe(sourcemaps.init())
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
+    //.pipe(miniCSS({ sourcemaps: true }))
+    .pipe(gulp.dest(routes.scss.dest))
+        
 
 const js = () =>
     gulp.src(routes.js.src,)
@@ -129,4 +132,5 @@ const live = gulp.parallel([bSyncInfo, watch]);
 //
 export const build = gulp.series([prepare, assets]);
 export const dev = gulp.series([build, live]);
+export const release = gulp.series([build]);
 //export const deploy = gulp.series([build, ghDeploy]);
