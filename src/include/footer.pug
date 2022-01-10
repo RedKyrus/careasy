@@ -1,17 +1,18 @@
-mixin snsIcon()
-  li
+mixin snsicon(altName, imgPath, ahref="javascrip();")
+  li: a(href=ahref): img(src=imgPath alt="연결"+altName)
 
 footer.footer 
   div.footer-logo
-      img(src="", alt="로고")
+      img(src=`${imgPath}/common/logo_footer.png`, alt="로고")
   div.footer-info  
     div.copy-text-cont
       div 회사면
       p 
       p.copyright copyright &copy careasyCorp.All rights reserved.
     div.footer-snsicon-cont
-      ul
-        li 카톡
+      ul.snsicon-ul
+        +snsicon("카톡","ㅅ","ㅅ")
+        +snsicon("블로그","ㅅ","ㅅ")
         li 블로그
         li 유튜브
         li 인스타그램
