@@ -47,9 +47,9 @@ const routes = {
         dest: "build/"
     },
     img: {
-        watch: "src/assets/img/**/*",
-        src: "src/assets/img/**/*",
-        dest: "build/static/img/"
+        watch: "src/img/**/*",
+        src: "src/img/**/*",
+        dest: "build/img/"
     },
     scss: {
         watch: "src/assets/scss/**/*.scss",
@@ -71,7 +71,7 @@ const pug = () =>
 
 const img = () =>
     gulp.src(routes.img.src)
-        .pipe(image())
+        //.pipe(image())
         .pipe(gulp.dest(routes.img.dest));
 
 const scss = () =>

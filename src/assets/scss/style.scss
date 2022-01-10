@@ -2,14 +2,17 @@
 @import "base/_variables";
 @import "base/_common";
 
-@import "_footer";
-@import "_header";
-
-
-@import "_topAd";
-
-@import "_main";
+//
+*{
+  font-family: 'Noto Sans KR', sans-serif;//기본굵기 400
+}
 
 body{
   background-color: #ffffff;
 }
+
+
+@import "_footer";
+@import "_header";
+@import "_topAd";
+@import "_main";

@@ -15,16 +15,15 @@ mixin inputText(plaName, className)
 mixin inputTel(plaName, className)
     input(type="tel" class=className placeholder=plaName)
 
-
 block content
-
   
   main(class="wrap-container page-main")
     section(class="sect sect-intro")
+      include ../include/header
       div(class="sect-container")
         div(class="intro-content")
           div(class="intro-main")
-            img(src="", alt="메인 이미지")
+            img(src=`${imgPath}/main/main_intro.png`, alt="메인 이미지")
           form(class="in-info-content")
             p(class="info-title") 부담없이 렌터카 견적 받아보세요!
             div(class="in-info-area")

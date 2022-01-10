@@ -47,9 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-/*박스사이징*/
+/*박스사이징 및 폰트*/
 *{
   box-sizing: border-box;
+}
+
+img{
+  display: block;
 }
 
 input,button{
