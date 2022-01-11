@@ -53,13 +53,24 @@ table {
 }
 
 img{
-  display: block;
+  image-rendering: crisp-edges;
+  vertical-align: top;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link,a:visited,a:hover,a:active{
 }
 
 input,button{
   outline: none;
   border: none;
+  margin: 0;
+  padding: 0;
 }
 button{
+  background: none;
   cursor: pointer;
 }

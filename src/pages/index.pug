@@ -5,15 +5,15 @@ extends ../template/layout
 //-함수들
 mixin titleMainSub(titleMain, titleSub)
   .title-area
-    p.titleMain= titleMain
-    p.titleSub= titleSub
+    p.title-main= titleMain
+    p.title-sub= titleSub
   
 mixin inputText(plaName, className)
-    input(type="text" class=className placeholder=plaName)
+    input(type="text" class=className autocomplete='off' placeholder=plaName)
     
 
 mixin inputTel(plaName, className)
-    input(type="tel" class=className placeholder=plaName)
+    input(type="tel" class=className autocomplete='off' placeholder=plaName)
 
 block content
   
@@ -27,8 +27,8 @@ block content
           form(class="in-info-content")
             p(class="info-title") 부담없이 렌터카 견적 받아보세요!
             div(class="in-info-area")
-              +inputText("이    름","in-name")
-              +inputTel("연 락 처","in-phone" )
+              +inputText("이        름","in-name")
+              +inputTel("연  락  처","in-phone" )
               +inputText("관심차종 1", "in-carype in-cartype01")
               +inputText("관심차종 2", "in-cartype02")
               +inputText("관심차종 3", "in-cartype03")
@@ -40,18 +40,17 @@ block content
         
     section(class="sect sect-ad-middle")
       div(class="sect-container")
-        img(src="", alt="광고 이미지")
+        img(src=`${imgPath}/main/ad_middle.png`, alt="광고 이미지")
 
     section(class="sect sect-special")
       div(class="sect-container")
-        +titleMainSub("이달의 특가차량","이달의 특거로 저렴하게 렌트할 수 있는 차량!")
+        +titleMainSub("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!")
 
     section(class="sect sect-youtube")
       div(class="sect-container")
-        
         div(class="title-area")
           p(class="title-main")
-            img(src="", alt="유튜브 제목")
+            img(src=`${imgPath}/main/title_youtube.png`, alt="유튜브 제목")
           p(class="title-sub") 유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.
         div(class="youtube-contents")
         ul 
@@ -68,10 +67,16 @@ block content
 
     section(class="sect sect-partner")
       div(class="sect-container")
+        div(class="title-area title-partner")
+          img(src=`${imgPath}/main/partner_title_logo.png`, alt="타이틀 로고" class="title-logo")
+          p(class="title-main") 공식파트너
+      div(class="partner-list-cont")
+        img(src=`${imgPath}/main/partner_list.png`, alt="파트너사")
         
 
     section(class="sect sect-ad-bottom")
-
+      div(class="sect-container")
+        //-img(src=`${imgPath}/main/ad_bottom.png`, alt="광고 이미지")
 
 
   script(src="../static/js/main.js")

@@ -1,12 +1,15 @@
 header.header 
   div.header-container
     div.header-logo
-      a(href="#")
-        img(src="", alt="탑로고")
+      a(href="/index.html"): img(src=`${imgPath}/common/logo_top.png`, alt="탑로고")
 
     nav.top-menu-content
       ul.top-menu-ul
-        li 카이지렌터카!
-        li 즉시출고차량
-        li 이달의 특가차량
-        li 고객후기
+        li: a(href="") 카이지렌터카!
+        li: a(href="") 즉시출고차량
+        li: a(href="") 이달의 특가차량
+        li: a(href="") 고객후기
+
+    div.btn-box-branch
+        button(type="button")
+          img(src=`${imgPath}/common/btn_branch.png`, alt="지사모집")

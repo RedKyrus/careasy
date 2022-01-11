@@ -1,4 +1,39 @@
 .top-ad{
   width: 100%;
-  background-color: #57A7A4;
+  background-color: #3BA058;
+  text-align: center;
+  cursor: pointer;
+}
+
+.top-ad-cont{
+  width: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn-close-ad{
+    width: 28px;
+    height: 28px;
+    background-color: #050505;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: 18px;
+    position: relative;
+    &::after, &::before{
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      width: 2px;
+      height: 15px;
+      top: 50%;
+      left: 50%;
+      //transform: rotate(45deg);
+    }
+
+    &::after{
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+    &::before{
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+  }
 }

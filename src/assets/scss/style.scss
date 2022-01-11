@@ -5,11 +5,16 @@
 //
 *{
   font-family: 'Noto Sans KR', sans-serif;//기본굵기 400
+  //일반공식(pohto_va*base_font_size/1000)
+  letter-spacing: -0.075em;
+  line-height: 1;
 }
 
 body{
   background-color: #ffffff;
 }
+
+
 
 
 @import "_footer";

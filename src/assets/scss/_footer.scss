@@ -1,12 +1,34 @@
 .footer{
+  padding-bottom: 30px;
   width: 100%;
   text-align: center;
+  img{
+    display: inline;
+  }
   .footer-container{
-    
+    text-align: center;
+  
   }
 
 
   .footer-logo{
+    padding-top: 26px;
+    padding-bottom: 21px;
     border-bottom: solid 1px #333;
+  }
+}
+
+.footer-info{
+  margin-top:42px;
+}
+
+.footer-snsicon-cont{
+  margin-top: 43px;
+  .snsicon-ul{
+    display: flex;
+    justify-content: center;
+    &>li{
+      margin-right: 14px;
+    }
   }
 }

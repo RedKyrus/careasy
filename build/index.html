@@ -16,20 +16,27 @@
   </head>
   <body class="body">
     <div class="wrap">
-      <div class="top-ad"><img src="" alt="광고이미지"></div>
+      <div class="top-ad">
+        <div class="top-ad-cont"><img src="img/common/ad_top_content.png" alt="광고이미지">
+          <button class="btn-close-ad" type="button"></button>
+        </div>
+      </div>
       <main class="wrap-container page-main">
         <section class="sect sect-intro">
           <header class="header"> 
             <div class="header-container">
-              <div class="header-logo"><a href="#"><img src="" alt="탑로고"></a></div>
+              <div class="header-logo"><a href="/index.html"><img src="img/common/logo_top.png" alt="탑로고"></a></div>
               <nav class="top-menu-content">
                 <ul class="top-menu-ul">
-                  <li>카이지렌터카!</li>
-                  <li>즉시출고차량</li>
-                  <li>이달의 특가차량</li>
-                  <li>고객후기</li>
+                  <li><a href="">카이지렌터카!</a></li>
+                  <li><a href="">즉시출고차량</a></li>
+                  <li><a href="">이달의 특가차량</a></li>
+                  <li><a href="">고객후기</a></li>
                 </ul>
               </nav>
+              <div class="btn-box-branch">
+                <button type="button"><img src="img/common/btn_branch.png" alt="지사모집"></button>
+              </div>
             </div>
           </header>
           <div class="sect-container">
@@ -38,11 +45,11 @@
               <form class="in-info-content">
                 <p class="info-title">부담없이 렌터카 견적 받아보세요!</p>
                 <div class="in-info-area">
-                  <input class="in-name" type="text" placeholder="이    름"/>
-                  <input class="in-phone" type="tel" placeholder="연 락 처"/>
-                  <input class="in-carype in-cartype01" type="text" placeholder="관심차종 1"/>
-                  <input class="in-cartype02" type="text" placeholder="관심차종 2"/>
-                  <input class="in-cartype03" type="text" placeholder="관심차종 3"/>
+                  <input class="in-name" type="text" autocomplete="off" placeholder="이        름"/>
+                  <input class="in-phone" type="tel" autocomplete="off" placeholder="연  락  처"/>
+                  <input class="in-carype in-cartype01" type="text" autocomplete="off" placeholder="관심차종 1"/>
+                  <input class="in-cartype02" type="text" autocomplete="off" placeholder="관심차종 2"/>
+                  <input class="in-cartype03" type="text" autocomplete="off" placeholder="관심차종 3"/>
                 </div>
                 <button class="btn-car-quote" type="button">간편견적신청</button>
               </form>
@@ -52,26 +59,26 @@
         <section class="sect sect-release">
           <div class="sect-container">
             <div class="title-area">
-              <p class="titleMain">즉시출고차량</p>
-              <p class="titleSub">차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!</p>
+              <p class="title-main">즉시출고차량</p>
+              <p class="title-sub">차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!</p>
             </div>
           </div>
         </section>
         <section class="sect sect-ad-middle">
-          <div class="sect-container"><img src="" alt="광고 이미지"></div>
+          <div class="sect-container"><img src="img/main/ad_middle.png" alt="광고 이미지"></div>
         </section>
         <section class="sect sect-special">
           <div class="sect-container">
             <div class="title-area">
-              <p class="titleMain">이달의 특가차량</p>
-              <p class="titleSub">이달의 특거로 저렴하게 렌트할 수 있는 차량!</p>
+              <p class="title-main">이달의 특가차량</p>
+              <p class="title-sub">이달의 특가로 저렴하게 렌트할 수 있는 차량!</p>
             </div>
           </div>
         </section>
         <section class="sect sect-youtube">
           <div class="sect-container">
             <div class="title-area">
-              <p class="title-main"><img src="" alt="유튜브 제목"></p>
+              <p class="title-main"><img src="img/main/title_youtube.png" alt="유튜브 제목"></p>
               <p class="title-sub">유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.</p>
             </div>
             <div class="youtube-contents"></div>
@@ -84,15 +91,22 @@
         <section class="sect sect-review">
           <div class="sect-container">
             <div class="title-area">
-              <p class="titleMain">고객후기</p>
-              <p class="titleSub">실제 구매하신 고객님들의 찐후기입니다</p>
+              <p class="title-main">고객후기</p>
+              <p class="title-sub">실제 구매하신 고객님들의 찐후기입니다</p>
             </div>
           </div>
         </section>
         <section class="sect sect-partner">
+          <div class="sect-container">
+            <div class="title-area title-partner"><img class="title-logo" src="img/main/partner_title_logo.png" alt="타이틀 로고">
+              <p class="title-main">공식파트너</p>
+            </div>
+          </div>
+          <div class="partner-list-cont"><img src="img/main/partner_list.png" alt="파트너사"></div>
+        </section>
+        <section class="sect sect-ad-bottom">
           <div class="sect-container"></div>
         </section>
-        <section class="sect sect-ad-bottom"></section>
       </main>
       <script src="../static/js/main.js"></script>
       <scritt></scritt>
@@ -102,15 +116,14 @@
           <div class="copy-text-cont">
             <div>회사면</div>
             <p> </p>
-            <p class="copyright">copyright &copy careasyCorp.All rights reserved.</p>
+            <p class="copyright">copyright &copy careasy Corp.All rights reserved.</p>
           </div>
           <div class="footer-snsicon-cont">
             <ul class="snsicon-ul">
-                    <li><a href="ㅅ"><img src="ㅅ" alt="연결카톡"></a></li>
-                    <li><a href="ㅅ"><img src="ㅅ" alt="연결블로그"></a></li>
-              <li>블로그</li>
-              <li>유튜브</li>
-              <li>인스타그램</li>
+                    <li><a href="#none"><img src="img/common/icon_circle_katalk.png" alt="연결 카톡"></a></li>
+                    <li><a href="#none"><img src="img/common/icon_circle_blog.png" alt="연결 블로그"></a></li>
+                    <li><a href="#none"><img src="img/common/icon_circle_youtube.png" alt="연결 유뷰브"></a></li>
+                    <li><a href="#none"><img src="img/common/icon_circle_instagram.png" alt="연결 인스타그램"></a></li>
             </ul>
           </div>
         </div>
