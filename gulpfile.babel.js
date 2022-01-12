@@ -57,9 +57,10 @@ const routes = {
         dest: "build/static/css/"
     },
     js: {
-        watch:"src/assets/**/*.js",
-        src:"src/assets/js/**/!(_)*.js",
-        dest:"build/static/js/"
+        watch: "src/assets/**/*.js",
+        src: ["src/assets/js/**/!(_)*.js","!src/assets/js/lib/*.js"],
+        lib: "src/assets/js/?(lib)/**/*.js",
+        dest: "build/static/js/"
     }
 }
 
@@ -85,13 +86,14 @@ const scss = () =>
         
 
 const js = () =>
-    gulp.src(routes.js.src,)
+    gulp.src(routes.js.src)
         .pipe(bro({transform: [
             babelify.configure({presets:['@babel/preset-env']}),
             ['uglifyify',{global:true}]
         ]}))
         .pipe(gulp.dest(routes.js.dest))
-
+        .pipe(gulp.src(routes.js.lib))
+        .pipe(gulp.dest(routes.js.dest))
 
 //일단 안씀.
 const webserver = ()=>
