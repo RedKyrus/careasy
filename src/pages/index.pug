@@ -9,11 +9,29 @@ mixin titleMainSub(titleMain, titleSub)
     p.title-sub= titleSub
   
 mixin inputText(plaName, className)
-    input(type="text" class=className autocomplete='off' placeholder=plaName)
+  input(type="text" class=className autocomplete='off' placeholder=plaName)
     
 
 mixin inputTel(plaName, className)
-    input(type="tel" class=className autocomplete='off' placeholder=plaName)
+  input(type="tel" class=className autocomplete='off' placeholder=plaName)
+
+mixin slideListRelese()
+  -for (let i= 0; i < 6; i++)
+    -let num= i+1;
+    if (i < 10)
+      -num= "0" + num
+    
+    a(class="swiper-slide info-box")
+      div.car-top
+        p.car-num #{num}
+        p.car-icon: img(src=`${imgPath}/main/icon_relese.png`, alt="아이콘")
+      div.img-area: img(src=`${imgPath}/car/car_relese01.png`, alt="자동차이미지")
+      div.car-info
+        p.car-name K5
+        p.car-deposit 보증금 30%
+        p.car-price 월42만원대
+        p.car-tip (세금/보험료/방문정비 포함)
+        button(type="button" class="btn-quote") 견적신청하기
 
 block content
   
@@ -23,7 +41,11 @@ block content
       div(class="sect-container")
         div(class="intro-content")
           div(class="intro-main")
-            img(src=`${imgPath}/main/main_intro.png`, alt="메인 이미지")
+            div(class="bg-area"): img(src=`${imgPath}/main/main_intro.png`, alt="메인 이미지")
+            div(class="text-area")
+              p.title-main 카니발
+              p.title-sub 요즘 대세는 카니발
+              p.txt 이번달 최대할인가로 만나보세요
           form(class="in-info-content")
             p(class="info-title") 부담없이 렌터카 견적 받아보세요!
             div(class="in-info-area")
@@ -32,11 +54,29 @@ block content
               +inputText("관심차종 1", "in-carype in-cartype01")
               +inputText("관심차종 2", "in-cartype02")
               +inputText("관심차종 3", "in-cartype03")
+            div(class="agree-area")
+              input(type="checkbox", id="check-agree" class="check-agree")
+              label(for="check-agree") 개인정보수집동의
+              button(type="button") 보기
+              
             button(type="button" class="btn-car-quote") 간편견적신청
       
     section(class="sect sect-release")
       div(class="sect-container")
-        +titleMainSub("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!")
+        +titleMainSub("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!")  
+
+        div(class="slide-cont-release")
+          div(class="slide-area")
+            div(class="swiper")
+              ul(class="swiper-wrapper car-info-area car-info-style-purple")
+                +slideListRelese
+
+            div(class="slide-btn slide-btn-prev")
+              img(src="img/main/btn_arrow_left.png", alt="슬라이드 이전")
+            div(class="slide-btn slide-btn-next")
+              img(src="img/main/btn_arrow_left.png", alt="슬라이드 다음")
+
+          div(class="slide-pagination")
         
     section(class="sect sect-ad-middle")
       div(class="sect-container")
@@ -80,5 +120,5 @@ block content
 
 
   script(src="../static/js/main.js")
-  scritt
+  
     //-include ../assets/js/main.js

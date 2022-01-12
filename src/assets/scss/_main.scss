@@ -25,13 +25,21 @@
 .sect{
   width: 100%;
   text-align: center;
+  padding-top: 108px;
   .sect-container{
     width: 1080px;
     margin: 0 auto;
   }
 }
+
+
+[class*="sect-ad"]{
+  padding-top: 0;
+}
+
 .sect-release{
   background-color: #ECEAEF;
+  padding-bottom: 84px;
 }
 // .sect-special{
 //   //background-color: #ECEAEF;
@@ -46,7 +54,6 @@
 }
 
 .sect-partner{
-  padding-top: 108px;
   padding-bottom: 84px;
 }
 
@@ -79,8 +86,31 @@
     //background: url("img/main/main_intro.png") no-repeat;
     position: relative;
     overflow: hidden;
-    background-color: salmon;
     box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
+    .text-area{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding-left: 46px;
+      &>p{
+        text-align: left;
+        color: #fff;
+        font-weight: 500;
+      }
+      .title-main{
+        font-size: 62px;
+        margin-top: 90px;
+      }
+      .title-sub{
+        font-size: 30px;
+        margin-top: 18px;
+      }
+      .txt{
+        font-size: 22px;
+        margin-top: 220px;
+      }
+    }
   }
 }
 
@@ -141,6 +171,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-top: 10px;
+    margin-top: 18px;
   }
 }
 
@@ -151,4 +182,93 @@
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: auto, auto;
+}
+
+
+/*슬라이드 부분*/
+.slide-cont-release{
+  margin-top: 68px;
+  position: relative;
+  width: 100%;
+  //margin: 0 auto;
+  .slide-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper{
+    order:2;
+    width: 1018px;
+  }
+
+  .slide-btn{
+    cursor: pointer;
+  }
+  .slide-btn-prev{
+    order: 1;
+    left: 0;
+  }
+  .slide-btn-next{
+    order: 3;
+    transform: scaleX(-1);
+  }
+
+  .slide-pagination{
+    margin-top: 44px;
+    .swiper-pagination-bullet{
+      background-color: #bd9fdf;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #5b1e8f;
+    }
+  }
+}
+
+
+.car-info-area{
+  .info-box{
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 30px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+
+    .car-top{
+      display: flex;
+      justify-content: space-between;
+      padding:0 24px;
+    }
+
+    .car-info{
+      padding:0 24px;
+      text-align: left;
+    }
+
+
+    .btn-quote{
+      font-size: 25px;
+      font-weight: 500;
+      width: 100%;
+      height: 55px;
+      border-radius: 28px;
+      margin-top: 18px;
+    }
+  }
+}
+
+.car-info-style-purple{
+  
+  .info-box{
+    border:1px solid #b18bd1;
+    
+  }
+
+  
+
+  .btn-quote{
+    color: #49276e;
+    background-color: #dac9ed;
+  }
 }

@@ -1,21 +1,35 @@
-import { random } from "./util"
+let onready = () =>{
 
-
-const rOne = random(10);
-const rTwo = random(40);
-
-console.log(`${rOne} ${rTwo}`);
-
-
-let mainStart = function(){
-  window.addEventListener('DOMContentLoaded', function()
-  {
-      console.log("시작")
+  const slideReleasPath =".slide-cont-release "
+  const swiper = new Swiper(slideReleasPath+'.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+  
+    // // If we need pagination
+    pagination: {
+      el: slideReleasPath+'.slide-pagination',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: slideReleasPath+'.slide-btn-next',
+      prevEl: slideReleasPath+'.slide-btn-prev',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
   });
 }
 
-function xx(){
-  console.log("xx");
-}
 
-xx();
+
+
+window.addEventListener('DOMContentLoaded', onready);
+
