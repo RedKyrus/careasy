@@ -184,3 +184,47 @@
   background-size: auto, auto;
 }
 
+.sect-review{
+    .btn-go-page-review{
+      margin-top: 72px;
+      display: block;
+      text-align: right;
+    }
+}
+
+.review-ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  .review-area{
+    text-align: left;
+    width: 252px;
+    .img-area{
+      text-align: center;
+      border: 1px solid #b2b2b2;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+    .review-title{
+      margin-top: 20px;
+    }
+    .review-text{
+      margin-top: 14px;
+      //line-clamp: 3;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .rank-area{
+      display: grid;
+      grid-template-columns: 0fr 1fr;      // grid-template-rows: 1fr 1fr;
+      margin-top: 24px;
+      .icon-people{
+        grid-row: 1/3;
+        margin-right: 10px;
+        // grid-column: 1/2;
+      }
+    }
+
+  }
+}
