@@ -18,7 +18,7 @@ mixin inputTel(plaName, className)
 mixin slideListRelese()
   -for (let i= 0; i < 6; i++)
     -let num= i+1;
-    if (i < 10)
+    if (num < 10)
       -num= "0" + num
     
     a(class="swiper-slide info-box")
@@ -29,9 +29,57 @@ mixin slideListRelese()
       div.car-info
         p.car-name K5
         p.car-deposit 보증금 30%
-        p.car-price 월42만원대
+          p.car-price 월42만원대
         p.car-tip (세금/보험료/방문정비 포함)
         button(type="button" class="btn-quote") 견적신청하기
+
+
+
+mixin SpecialInfobox(num)
+  a(class="info-box")
+    div.car-top
+      p.car-num #{num}
+      p.car-icon: img(src=`${imgPath}/main/icon_special.png`, alt="아이콘")
+    div.img-area: img(src=`${imgPath}/car/car_relese01.png`, alt="자동차이미지")
+    div.car-info
+      p.car-name K5
+      p.car-deposit 보증금 30%
+      p.car-price 월42만원대
+      p.car-tip (세금/보험료/방문정비 포함)
+      button(type="button" class="btn-quote") 견적신청하기
+
+mixin slideListSpecial()
+  -let num= 0;
+  -for (let i= 0; i < 2; i++)
+    div(class="swiper-slide slide-part")
+      -for (let j= 0; j < 6; j++)
+        -num +=1;
+        -let numString;
+        if (num < 10)
+          -numString= "0" + num;
+        else
+          -numString= num;
+        
+        +SpecialInfobox(numString)
+      
+      
+    
+
+
+mixin slideArea(classMainName, classStyleName, slideListFomatFun)
+  div(class=`slide-cont ${classMainName} ${classStyleName}`)
+    div(class="slide-area")
+      div(class="swiper")
+        div(class="swiper-wrapper car-info-area")
+          +#{slideListFomatFun}
+
+      div(class="slide-btn slide-btn-prev")
+        img(src="img/main/btn_arrow_left.png", alt="슬라이드 이전")
+      div(class="slide-btn slide-btn-next")
+        img(src="img/main/btn_arrow_left.png", alt="슬라이드 다음")
+        
+    div(class="slide-pagination")
+
 
 block content
   
@@ -65,18 +113,9 @@ block content
       div(class="sect-container")
         +titleMainSub("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!")  
 
-        div(class="slide-cont-release")
-          div(class="slide-area")
-            div(class="swiper")
-              ul(class="swiper-wrapper car-info-area car-info-style-purple")
-                +slideListRelese
-
-            div(class="slide-btn slide-btn-prev")
-              img(src="img/main/btn_arrow_left.png", alt="슬라이드 이전")
-            div(class="slide-btn slide-btn-next")
-              img(src="img/main/btn_arrow_left.png", alt="슬라이드 다음")
-
-          div(class="slide-pagination")
+        //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
+        +slideArea("slide-cont-release", "car-info-style-purple", "slideListRelese")
+  
         
     section(class="sect sect-ad-middle")
       div(class="sect-container")
@@ -85,6 +124,9 @@ block content
     section(class="sect sect-special")
       div(class="sect-container")
         +titleMainSub("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!")
+
+        //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
+        +slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial")
 
     section(class="sect sect-youtube")
       div(class="sect-container")
@@ -104,6 +146,21 @@ block content
     section(class="sect sect-review")
       div(class="sect-container")
         +titleMainSub("고객후기","실제 구매하신 고객님들의 찐후기입니다")
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
 
     section(class="sect sect-partner")
       div(class="sect-container")

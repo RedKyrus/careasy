@@ -19,3 +19,16 @@ function xx(){
 }
 
 xx();
+
+
+
+setInterval(() => {
+  
+}, intervalInms);
+
+console.log(object);
+
+  
+}
+
+console.debug(object);

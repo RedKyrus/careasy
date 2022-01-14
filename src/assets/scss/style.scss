@@ -8,6 +8,7 @@
   //일반공식(pohto_va*base_font_size/1000)
   letter-spacing: -0.075em;
   line-height: 1;
+  height: 100;
 }
 
 body{
@@ -15,9 +16,8 @@ body{
 }
 
 
-
-
 @import "_footer";
 @import "_header";
 @import "_topAd";
 @import "_main";
+@import "_slide";
