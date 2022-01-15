@@ -79,6 +79,9 @@
 
 @media (max-width:$mobileBaseMaxSize) {
   .header{
+    .header-bg{
+      height: toRem(3000);
+    }
     .header-container{
       width: 100%;
       display: block;

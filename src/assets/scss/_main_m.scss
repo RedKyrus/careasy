@@ -18,7 +18,7 @@
 
   .partner-list-cont{
     img{
-    
+      width: 100%;
     }
   }
 
@@ -32,6 +32,19 @@
     }
   }
 
-
+  .review-ul{
+    //justify-content: space-around;
+    .review-area{
+      width: toRem(314);
+      &:nth-child(n+3){
+        display: none;
+      }
+      .img-area{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
   
 }
