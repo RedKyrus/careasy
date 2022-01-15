@@ -1,0 +1,10 @@
+@media (min-width:$mobileBaseMaxSize){
+  .pc-hidden{
+    display: none;
+  }
+}
+@media (max-width:$mobileBaseMaxSize) {
+  .mobile-hidden{
+    display: none;
+  }
+}

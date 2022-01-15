@@ -1,5 +1,10 @@
 $mobileBaseMaxSize: 750px;
 
+
+@function remove-unit($value) {
+  @return (calc($value / ($value * 0 + 1)));
+}
+
 @function toRem($pxValue){
-  @return ($pxValue/10)
+  @return remove-unit(calc($pxValue / 10))*1rem;
 }

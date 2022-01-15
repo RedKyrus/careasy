@@ -130,7 +130,9 @@ block content
         
     section(class="sect sect-ad-middle")
       div(class="sect-container")
-        img(src=`${imgPath}/main/ad_middle.png`, alt="광고 이미지")
+        div(class="ad-middle-area")
+          img(src=`${imgPath}/main/ad_middle.png`, alt="광고 이미지" class="mobile-hidden")
+          img(src=`${imgPath}/main/ad_middle_m.png`, alt="광고 이미지 모바일" class="pc-hidden")
 
     section(class="sect sect-special")
       div(class="sect-container")
@@ -170,10 +172,11 @@ block content
     section(class="sect sect-partner")
       div(class="sect-container")
         div(class="title-area title-partner")
-          img(src=`${imgPath}/main/partner_title_logo.png`, alt="타이틀 로고" class="title-logo")
+          img(src=`${imgPath}/main/partner_title_logo.png`, alt="타이틀 로고" 
+          class="title-logo")
           p(class="title-main") 공식파트너
-      div(class="partner-list-cont")
-        img(src=`${imgPath}/main/partner_list.png`, alt="파트너사")
+        div(class="partner-list-cont")
+          img(src=`${imgPath}/main/partner_list.png`, alt="파트너사")
         
 
     section(class="sect sect-ad-bottom")

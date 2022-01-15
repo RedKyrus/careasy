@@ -8,10 +8,30 @@
     
   }
 
+  .sect-ad-middle{
+    .ad-middle-area{
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .partner-list-cont{
+    img{
+    
+    }
+  }
+
   .intro-content{
     flex-direction: column;
+  
+    .intro-main{
+      .text-area{
+        width: toRem(442);
+      }
+    }
   }
-  .intro-main{
-    
-  }
+
+
+  
 }
