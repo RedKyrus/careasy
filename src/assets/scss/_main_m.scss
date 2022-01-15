@@ -1,0 +1,17 @@
+/*반응형*/
+@media (max-width:750px) {
+  
+  .sect{
+    .sect-container{
+      width: 100%;
+    }
+    
+  }
+
+  .intro-content{
+    flex-direction: column;
+  }
+  .intro-main{
+    
+  }
+}

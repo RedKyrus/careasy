@@ -15,9 +15,17 @@ body{
   background-color: #ffffff;
 }
 
+@media (max-width:$mobileBaseMaxSize) {
+  html{font-size: 62.5%;} //반응형 기준폰트
+  body{font-size: calc(100vw/750);}
+
+  img{image-rendering: -webkit-optimize-contrast;} //이미지 퀄리티업
+}
+
 
 @import "_footer";
 @import "_header";
 @import "_topAd";
 @import "_main";
+@import "_main_m";
 @import "_slide";

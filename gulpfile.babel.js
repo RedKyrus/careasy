@@ -7,7 +7,7 @@ import image from "gulp-image";
 import sourcemaps from "gulp-sourcemaps"
 import gIf from "gulp-if";
 import miniCSS from "gulp-csso";
-import removSoucemaps from "gulp-remove-sourcemaps";
+import removSourcemaps from "gulp-remove-sourcemaps";
 
 
 //js용(gulp-bro) babelify(바벨 쓰기 위해 필요)
@@ -92,8 +92,13 @@ const js = () =>
             ['uglifyify',{global:true}]
         ]}))
         .pipe(gulp.dest(routes.js.dest))
-        .pipe(gulp.src(routes.js.lib))
-        .pipe(gulp.dest(routes.js.dest))
+        // .pipe(gulp.src(routes.js.lib))
+        // .pipe(gulp.dest(routes.js.dest))
+
+const jslib = () =>
+  gulp.src(routes.js.src)
+      .pipe(gulp.src(routes.js.lib))
+      .pipe(gulp.dest(routes.js.dest))
 
 //일단 안씀.
 const webserver = ()=>
@@ -127,7 +132,7 @@ export const clean = () => del(["build"]);
 
 //
 const prepare = gulp.series([clean, img]);
-const assets = gulp.series([pug, scss, js]);
+const assets = gulp.series([pug, scss, js, jslib]);
 const live = gulp.parallel([bSyncInfo, watch]);
 
 

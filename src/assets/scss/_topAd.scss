@@ -38,3 +38,10 @@
     }
   }
 }
+
+
+@media (max-width:$mobileBaseMaxSize){
+  .top-ad-cont{
+    width: 100%;
+  }
+}

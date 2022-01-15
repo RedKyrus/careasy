@@ -1,4 +1,75 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";var onready=function(){new Swiper(".slide-cont-release .swiper",{loop:!0,slidesPerView:3,slidesPerGroup:3,spaceBetween:26,pagination:{el:".slide-cont-release .slide-pagination",clickable:!0},navigation:{nextEl:".slide-cont-release .slide-btn-next",prevEl:".slide-cont-release .slide-btn-prev"}}),new Swiper(".slide-cont-special .swiper",{loop:!0,slidesPerView:1,pagination:{el:".slide-cont-special .slide-pagination",clickable:!0},navigation:{nextEl:".slide-cont-special .slide-btn-next",prevEl:".slide-cont-special .slide-btn-prev"}})};window.addEventListener("DOMContentLoaded",onready);
+let onready = () =>{
 
-},{}]},{},[1]);
+  const slideRelesePath =".slide-cont-release "
+  const slideSpecialPath =".slide-cont-special "
+
+  const swiperRelesse = new Swiper(slideRelesePath+'.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 26,
+  
+    // // If we need pagination
+    pagination: {
+      el: slideRelesePath+'.slide-pagination',
+      //el: ".swiper-pagination",
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: slideRelesePath+'.slide-btn-next',
+      prevEl: slideRelesePath+'.slide-btn-prev',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+
+  //let divdeGroup = document.querySelector("");
+  const swiperSpecial = new Swiper(slideSpecialPath+'.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView: 1,
+    //slidesPerColumn:8,
+  
+    //slidesPerGroup: 3,
+    //spaceBetween: 26,
+
+    // // If we need pagination
+    pagination: {
+      el: slideSpecialPath+'.slide-pagination',
+      //el: ".swiper-pagination",
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: slideSpecialPath+'.slide-btn-next',
+      prevEl: slideSpecialPath+'.slide-btn-prev',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+
+
+
+
+
+}
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', onready);
+

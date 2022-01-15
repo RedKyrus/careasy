@@ -1,1 +1,5 @@
-$red: #cc2070;
+$mobileBaseMaxSize: 750px;
+
+@function toRem($pxValue){
+  @return ($pxValue/10)
+}

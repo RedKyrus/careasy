@@ -41,9 +41,9 @@
   background-color: #ECEAEF;
   padding-bottom: 84px;
 }
-// .sect-special{
-//   //background-color: #ECEAEF;
-// }
+.sect-special{
+  padding-bottom: 84px;
+}
 
 .sect-ad-middle{
   background-color: #FFE866;
@@ -70,8 +70,8 @@
 
 .sect-intro{
   //background: rgb(2,0,36);
-  background: linear-gradient(142deg, #700BBF 0%, #8E1096 60%, #92118F 100%);
-  padding:40px 0;
+  padding-top: 78px;
+  padding-bottom: 40px;
 }
 
 
@@ -79,7 +79,7 @@
 .intro-content{
   display: flex;
   justify-content: space-between;
-  padding-top: 75px;
+
 
   .intro-main{
     border-radius: 37px;
@@ -157,7 +157,60 @@
         margin-bottom: 22px;
       }
     }
-    
+  }
+
+  .agree-area{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    .check-agree{
+      display: none;
+      position: relative;
+      &:checked+.check-agree-label::before{
+        content: "✔";
+        justify-content: center;
+        background-color: #427abf;
+        color: #fff;
+      }
+    }
+    .check-agree-label{
+      padding-top: 1px;
+      user-select: none;
+      position: relative;
+      //display: inline-block;
+      color: #6c6c6c;
+      font-size: 20px;
+      font-weight: 500;
+      display: flex;
+      
+      &::before{
+        content: "";
+        vertical-align: top;
+        margin-right: 6px;
+        //position: absolute;
+        top: -1px;
+        display: flex;
+        //display: inline-block;
+        position: relative;
+        background-color: #b2b2b2;
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .btn-show{
+      margin-left: 10px;
+      background-color: #848484;
+      width: 58px;
+      height: 26px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      padding-top: 2px;
+      border-radius: 10px;
+    }
   }
 
   .btn-car-quote{
@@ -185,10 +238,13 @@
 }
 
 .sect-review{
-    .btn-go-page-review{
+    .go-page-review{
       margin-top: 72px;
       display: block;
       text-align: right;
+      color: #4a4a4a;
+      font-size: 17px;
+      font-weight: 500;
     }
 }
 
@@ -228,3 +284,4 @@
 
   }
 }
+
