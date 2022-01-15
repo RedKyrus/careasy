@@ -263,12 +263,19 @@
     }
     .review-title{
       margin-top: 20px;
+      color: #323232;
+      font-size: 20px;
+      font-weight: 500;
     }
     .review-text{
       margin-top: 14px;
       //line-clamp: 3;
-      text-overflow: ellipsis;
+      line-height: 1.2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
       overflow: hidden;
+      ///text-overflow: ellipsis;
     }
 
     .rank-area{
