@@ -36,7 +36,7 @@ mixin slideListRelese()
 
 
 mixin SpecialInfobox(num)
-  a(class="info-box")
+  a(class="swiper-slide info-box")
     div.car-top
       p.car-num #{num}
       p.car-icon: img(src=`${imgPath}/main/icon_special.png`, alt="아이콘")
@@ -47,6 +47,14 @@ mixin SpecialInfobox(num)
       p.car-price 월42만원대
       p.car-tip (세금/보험료/방문정비 포함)
       button(type="button" class="btn-quote") 견적신청하기
+
+
+mixin slideListSpecial02()
+  -for (let i= 0; i < 12; i++)
+    -let num= i+1;
+    if (num < 10)
+      -num= "0" + num
+    +SpecialInfobox(num)  
 
 mixin slideListSpecial()
   -let num= 0;
@@ -100,7 +108,9 @@ block content
       div(class="sect-container")
         div(class="intro-content")
           div(class="intro-main")
-            div(class="bg-area"): img(src=`${imgPath}/main/main_intro.png`, alt="메인 이미지")
+            div(class="bg-area")
+              img(src=`${imgPath}/main/main_intro.png`, alt="메인 이미지" class="mobile-hidden")
+              img(src=`${imgPath}/main/main_intro_m.png`, alt="메인 이미지 모바일" class="pc-hidden")
             div(class="text-area")
               p.title-main 카니발
               p.title-sub 요즘 대세는 카니발
@@ -139,7 +149,8 @@ block content
         +titleMainSub("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!")
 
         //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
-        +slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial")
+        //-+slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial")
+        +slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial02")
 
     section(class="sect sect-youtube")
       div(class="sect-container")
@@ -176,12 +187,14 @@ block content
           class="title-logo")
           p(class="title-main") 공식파트너
         div(class="partner-list-cont")
-          img(src=`${imgPath}/main/partner_list.png`, alt="파트너사")
+          img(src=`${imgPath}/main/partner_list.png`, alt="파트너사" class="mobile-hidden")
+          img(src=`${imgPath}/main/partner_list_m.png`, alt="파트너사" class="pc-hidden")
         
 
     section(class="sect sect-ad-bottom")
       div(class="sect-container")
-        //-img(src=`${imgPath}/main/ad_bottom.png`, alt="광고 이미지")
+        div(class="ad-bottom-area")
+          img(src=`${imgPath}/main/ad_bottom_m.png`, alt="광고 이미지 모바일" class="pc-hidden")
 
 
   script(src="static/js/main.js")

@@ -1,15 +1,50 @@
 /*반응형*/
 @media (max-width:750px) {
+  .page-main{
+    .title-area{
+      .title-main{
+        font-size: toRem(62);
+        
+        
+      }
+      .title-sub{
+        font-size: toRem(22);
+      }
+    }
+  
+    .title-partner{
+   
+      .title-logo{
+   
+      }
+    }
+  }
   
   .sect{
+    padding: 0 toRem(40);
+    padding-top: toRem(80);
     .sect-container{
       width: 100%;
     }
     
   }
 
+  [class*="sect-ad"]{
+    padding-top: 0;
+    padding: 0;
+  }
+
   .sect-ad-middle{
     .ad-middle-area{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .sect-ad-bottom{
+    height: auto;
+    background-image: none;
+    .ad-bottom-area{
       img{
         width: 100%;
       }
@@ -24,11 +59,82 @@
 
   .intro-content{
     flex-direction: column;
-  
+    //width: toRem(664);
+    border-radius: toRem(36);
     .intro-main{
-      .text-area{
-        width: toRem(442);
+      .bg-area{
+        img{
+          width: 100%;
+        }
       }
+      .text-area{
+        .title-main{
+          font-size: toRem(62);
+          margin-top: toRem(36);
+        }
+        .title-sub{
+          font-size: toRem(30);
+          margin-top: toRem(12);
+        }
+        .txt{
+          font-size: toRem(27);
+          margin-top: toRem(228);
+        }
+      }
+    }
+  }
+
+  .in-info-content{
+    margin-top: toRem(36);
+    width: 100%;
+    border-radius: toRem(34);
+    padding:0 toRem(48);
+    padding-top: toRem(38);
+    padding-bottom: toRem(26);
+
+    .info-title{
+      font-size: toRem(42);
+      letter-spacing: -1.4;
+    }
+
+    .in-info-area{
+      input{
+        height: toRem(76);
+        font-size: toRem(30);
+      }
+    }
+
+    .agree-area{
+
+      .check-agree{
+
+        &:checked+.check-agree-label::before{
+          font-size: toRem(34);
+        }
+      }
+      .check-agree-label{
+        //padding-top: toRem(2);
+        font-size: toRem(28);
+        line-height: 1.2;
+        &::before{
+          line-height: 1.1;
+          width: toRem(42);
+          height: toRem(42);
+        }
+      }
+  
+      .btn-show{
+        width: toRem(88);
+        height: toRem(42);
+        font-size: toRem(28);
+        padding-top: toRem(6);
+      }
+    }
+
+    .btn-car-quote{
+      height: toRem(85);
+      padding-top: toRem(20);
+      font-size: toRem(38);
     }
   }
 

@@ -87,17 +87,17 @@ const scss = () =>
 
 const js = () =>
     gulp.src(routes.js.src)
-        .pipe(bro({transform: [
-            babelify.configure({presets:['@babel/preset-env']}),
-            ['uglifyify',{global:true}]
-        ]}))
+        // .pipe(bro({transform: [
+        //     babelify.configure({presets:['@babel/preset-env']}),
+        //     ['uglifyify',{global:true}]
+        // ]}))
         .pipe(gulp.dest(routes.js.dest))
         // .pipe(gulp.src(routes.js.lib))
         // .pipe(gulp.dest(routes.js.dest))
 
 const jslib = () =>
-  gulp.src(routes.js.src)
-      .pipe(gulp.src(routes.js.lib))
+  gulp.src(routes.js.lib)
+      //.pipe(gulp.src(routes.js.lib))
       .pipe(gulp.dest(routes.js.dest))
 
 //일단 안씀.

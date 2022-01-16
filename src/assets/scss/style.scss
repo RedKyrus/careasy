@@ -8,7 +8,9 @@
   //일반공식(pohto_va*base_font_size/1000)
   letter-spacing: -0.075em;
   line-height: 1;
-  height: 100;
+}
+a{
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body{
@@ -16,8 +18,11 @@ body{
 }
 
 @media (max-width:$mobileBaseMaxSize) {
-  html{font-size: 62.5%;} //반응형 기준폰트
-  body{font-size: calc(100vw/750);}
+  //html{font-size: 62.5%;} //반응형 기준폰트
+  //body{font-size: calc(100vw/750);}
+  html{font-size: calc((100vw/750)*10);}
+  //body{font-size: 62.5%}
+  
 
   img{image-rendering: -webkit-optimize-contrast;} //이미지 퀄리티업
 }
