@@ -69,6 +69,8 @@ let onready = () =>{
 
   modalOpenEvent("agree");
   modalOpenEvent("quote");
+  modalOpenEvent("complete");
+  modalOpenEvent("branch");
 
   modalCloseEvent();
 

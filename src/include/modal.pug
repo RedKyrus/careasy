@@ -22,7 +22,7 @@ mixin modalFrame(modalName)
       label(for="check-agree-modal" class="check-agree-label") 개인정보수집동의
       button(type="button" class="btn-show fn-open-modal-agree") 보기
       
-    button(type="button" class="btn-car-quote") 간편견적신청
+    button(type="button" class="btn-car-quote fn-close-modal fn-open-modal-complete") 간편견적신청
 
 //모달-동의서
 +modalFrame("agree")
@@ -45,6 +45,20 @@ mixin modalFrame(modalName)
       |    나. 이용자가 개인정보의 파기를 요청하는 경우 해당 이용자의 개인정보를 파기합니다.
   
   button.fn-close-modal.btn-close 닫기
-          
 
 
+//완료
++modalFrame("complete")
+  div.logo: img(src=`${imgPath}/common/logo_top.png`, alt="")
+  p.p-main 신청이 완료됐습니다!
+  div.bar 
+  p.p-sub 전문상담원이 <br> 빠르게 연락드리겠습니다.
+  button(type="button" class="btn-ok fn-close-modal") 확인
+
+
+//자사모집
++modalFrame("branch")
+  button(type="button" class="btn-close fn-close-modal")
+  p 파트너 모집
+  p 카미닛과 함께 쉽고<br> 빠르게 영업하세요.
+  

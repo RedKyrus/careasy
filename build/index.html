@@ -40,7 +40,7 @@
             </ul>
           </nav>
           <div class="btn-box-branch">
-            <button type="button"><img src="img/common/btn_branch.png" alt="지사모집"></button>
+            <button class="btn-branch fn-open-modal-branch" type="button"> <img src="img/common/btn_branch.png" alt="지사모집"></button>
           </div>
         </div>
       </header>
@@ -70,7 +70,7 @@
                   <label class="check-agree-label" for="check-agree">개인정보수집동의</label>
                   <button class="btn-show fn-open-modal-agree" type="button">보기</button>
                 </div>
-                <button class="btn-car-quote" type="button">간편견적신청</button>
+                <button class="btn-car-quote fn-open-modal-complete" type="button">간편견적신청</button>
               </form>
             </div>
           </div>
@@ -454,7 +454,7 @@
                       <label class="check-agree-label" for="check-agree-modal">개인정보수집동의</label>
                       <button class="btn-show fn-open-modal-agree" type="button">보기</button>
                     </div>
-                    <button class="btn-car-quote" type="button">간편견적신청</button>
+                    <button class="btn-car-quote fn-close-modal fn-open-modal-complete" type="button">간편견적신청</button>
                   </form>
                 </div>
               </div>
@@ -470,6 +470,28 @@
    나. 이용자가 개인정보의 파기를 요청하는 경우 해당 이용자의 개인정보를 파기합니다.</pre>
                   </div>
                   <button class="fn-close-modal btn-close">닫기</button>
+                </div>
+              </div>
+            </div>
+      <!--완료-->
+            <div class="modal-wrap modal-complete">
+              <div class="modal-container">
+                <div class="modal-content modal-complete-cont">
+                  <div class="logo"><img src="img/common/logo_top.png" alt=""></div>
+                  <p class="p-main">신청이 완료됐습니다!</p>
+                  <div class="bar"> </div>
+                  <p class="p-sub">전문상담원이 <br> 빠르게 연락드리겠습니다.</p>
+                  <button class="btn-ok fn-close-modal" type="button">확인</button>
+                </div>
+              </div>
+            </div>
+      <!--자사모집-->
+            <div class="modal-wrap modal-branch">
+              <div class="modal-container">
+                <div class="modal-content modal-branch-cont">
+                  <button class="btn-close fn-close-modal" type="button"></button>
+                  <p>파트너 모집</p>
+                  <p>카미닛과 함께 쉽고<br> 빠르게 영업하세요.</p>
                 </div>
               </div>
             </div>
