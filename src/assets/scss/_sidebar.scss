@@ -1,0 +1,17 @@
+.sidebar-wrap{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  margin: 0 auto;
+  .sidebar-container{
+    position: absolute;
+    top: 240px;
+    left: 600px;
+    width: 105px;
+    .sidebar-ul{
+      //transform: translateY(-40%);
+    }
+  }
+}
