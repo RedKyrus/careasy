@@ -67,7 +67,9 @@ let onready = () =>{
     }
   });
 
-  modalOpenEvent();
+  modalOpenEvent("agree");
+  modalOpenEvent("quote");
+
   modalCloseEvent();
 
   window.addEventListener('resize', rearrangementSpecial)
@@ -161,25 +163,37 @@ let rearrangementSpecial = function(){
 }
 
 
-let modalOpenEvent = () =>{
-  let btnOpen = document.querySelector(".fn-open-modal-agree");
-  let tagetModal = document.querySelector(".modal-agree");
-
+let modalOpenEvent = (modalname) =>{
+  let btnOpenList = document.querySelectorAll(`.fn-open-modal-${modalname}`);
+  let tagetModal = document.querySelector(`.modal-${modalname}`);
+  
   let openModal= () =>{
     tagetModal.classList.add("modal-show");
+    console.log(modalname, "작동");
   }
 
-  btnOpen.addEventListener("click", openModal);
+  btnOpenList.forEach(btn =>{
+    btn.addEventListener("click", openModal);
+  });
 
 }
 
 let modalCloseEvent =() =>{
-  let btnClose = document.querySelector(".fn-close-modal");
-  let tagetModal = btnClose.closest(".modal-wrap");
+  let btnCloseList = document.querySelectorAll(".fn-close-modal");
+  //btnClose.closest(".modal-wrap");
+  
+  btnCloseList.forEach(btn =>{
+    let tagetModal = btn.closest(".modal-wrap");
+    console.log(tagetModal);
+    btn.addEventListener("click", ()=>{
+      tagetModal.classList.remove("modal-show");  
+    });
+  });
 
-  let closeModal = () =>{
-    tagetModal.classList.remove("modal-show");
-  }
-  btnClose.addEventListener("click", closeModal);
+  
 
+  // let closeModal = () =>{
+  //   tagetModal.classList.remove("modal-show");
+  // }
+  
 }
