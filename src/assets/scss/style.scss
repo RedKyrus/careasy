@@ -9,9 +9,9 @@
   letter-spacing: -0.075em;
   line-height: 1;
 }
-a{
-  font-family: 'Noto Sans KR', sans-serif;
-}
+// a{
+//   font-family: 'Noto Sans KR', sans-serif;
+// }
 
 body{
   background-color: #ffffff;
@@ -35,3 +35,4 @@ body{
 @import "_main_m";
 @import "_slide";
 @import "_sidebar";
+@import "_modal";

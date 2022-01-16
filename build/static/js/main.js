@@ -35,34 +35,6 @@ let onready = () =>{
   
   });
 
-
-
-  // let slideSpecial = document.querySelector(".slide-cont-special .car-info-area");
-  // let infoBoxList = slideSpecial.getElementsByClassName("info-box");
-
-  // //요소생성
-  // let tampTag = document.createElement('div');
-  // tampTag.innerHTML = "<div class='swiper-slide slide-part'></div>";
-  // let newTag = tampTag.children[0].cloneNode(true);
-  // tampTag.remove();
-  
-  // //리스트요소 복제
-  // let infoBoxListClone = [...infoBoxList];
-  // //원본리스트요소 삭제
-  // [...infoBoxList].forEach(el => el.remove());
-
-
-  // slideSpecial.append(newTag);
-  // slideSpecial.append(newTag.cloneNode(true));
-  // let slidePart = slideSpecial.getElementsByClassName("slide-part");
-  // console.log(slidePart);
-  // let iNum = 0;
-  // infoBoxListClone.forEach((item, index)=> {
-  //   //참고:실수형 오차 < Number.EPSILON
-  //   let iNum = parseInt(index/6);
-  //   slidePart[iNum].append(item);
-
-  // })
   rearrangementSpecial();
 
   const swiperSpecial = new Swiper(slideSpecialPath+'.swiper', {
@@ -94,6 +66,9 @@ let onready = () =>{
       }
     }
   });
+
+  modalOpenEvent();
+  modalCloseEvent();
 
   window.addEventListener('resize', rearrangementSpecial)
 
@@ -183,4 +158,28 @@ let rearrangementSpecial = function(){
   
     isRsizeMobileReady = false;
   }
+}
+
+
+let modalOpenEvent = () =>{
+  let btnOpen = document.querySelector(".fn-open-modal-agree");
+  let tagetModal = document.querySelector(".modal-agree");
+
+  let openModal= () =>{
+    tagetModal.classList.add("modal-show");
+  }
+
+  btnOpen.addEventListener("click", openModal);
+
+}
+
+let modalCloseEvent =() =>{
+  let btnClose = document.querySelector(".fn-close-modal");
+  let tagetModal = btnClose.closest(".modal-wrap");
+
+  let closeModal = () =>{
+    tagetModal.classList.remove("modal-show");
+  }
+  btnClose.addEventListener("click", closeModal);
+
 }
