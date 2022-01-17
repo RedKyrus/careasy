@@ -7,7 +7,12 @@ mixin titleMainSub(titleMain, titleSub)
   .title-area
     p.title-main= titleMain
     p.title-sub= titleSub
-  
+
+mixin titleMainSubAndScrollID(titleMain, titleSub, scrollID)
+  .title-area(data-scroll-id=scrollID)
+    p.title-main= titleMain
+    p.title-sub= titleSub
+
 mixin inputText(plaName, className)
   input(type="text" class=className autocomplete='off' placeholder=plaName)
     
@@ -130,9 +135,9 @@ block content
               
             button(type="button" class="btn-car-quote fn-open-modal-complete") 간편견적신청
       
-    section(class="sect sect-release")
+    section(class="sect sect-release" )
       div(class="sect-container")
-        +titleMainSub("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!")  
+        +titleMainSubAndScrollID("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!", "release")  
 
         //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
         +slideArea("slide-cont-release", "car-info-style-purple", "slideListRelese")
@@ -146,7 +151,7 @@ block content
 
     section(class="sect sect-special")
       div(class="sect-container")
-        +titleMainSub("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!")
+        +titleMainSubAndScrollID("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!","special")
 
         //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
         //-+slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial")

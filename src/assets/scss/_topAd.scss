@@ -5,6 +5,10 @@
   cursor: pointer;
 }
 
+.ad-hidden{
+  display: none !important;
+}
+
 .top-ad-cont{
   width: 1080px;
   display: flex;
@@ -43,5 +47,27 @@
 @media (max-width:$mobileBaseMaxSize){
   .top-ad-cont{
     width: 100%;
+    height: toRem(84);
+    img{
+     width: 80%; 
+    }
+    .btn-close-ad{
+      width: toRem(40);
+      height: toRem(40);
+      &::after, &::before{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 2px;
+        height: toRem(20);
+      }
+  
+      &::after{
+        
+      }
+      &::before{
+        
+      }
+    }
   }
 }

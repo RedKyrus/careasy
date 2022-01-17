@@ -74,6 +74,11 @@ let onready = () =>{
 
   modalCloseEvent();
 
+  topAdCloseEvent();
+
+
+  scrollMoveEvent();
+
   window.addEventListener('resize', rearrangementSpecial)
 
 }
@@ -190,11 +195,40 @@ let modalCloseEvent =() =>{
       tagetModal.classList.remove("modal-show");  
     });
   });
+  
+}
 
+let topAdCloseEvent =() =>{
+  let topAd = document.querySelector(".top-ad");
+  let btnCloseAd = document.querySelector(".top-ad .btn-close-ad");
+  //btnClose.closest(".modal-wrap");
+  
+  let closeTopAd = () =>{
+    topAd.classList.add("ad-hidden");
+  }
+
+  btnCloseAd.addEventListener("click",closeTopAd)
+  
+}
+
+let scrollMoveEvent = () =>{
+  let btnTrigger = document.querySelectorAll("[data-scroll-target]");
+  //let tagetList = document.querySelectorAll("[data-scroll-id]");
+  
   
 
-  // let closeModal = () =>{
-  //   tagetModal.classList.remove("modal-show");
-  // }
-  
+  btnTrigger.forEach(btn=>{
+    let targetID = btn.getAttribute("data-scroll-target");
+    let target = document.querySelector(`[data-scroll-id='${targetID}']`);
+    
+    if(target === null) return;
+
+    console.dir(target);
+    let pos = target.offsetTop - 20;
+
+    btn.addEventListener("click",()=>{
+      //window.scrollTo({top:pos, behavior:'smooth'});
+      window.scrollTo({top:pos, behavior:'smooth'});
+    });
+  });
 }
