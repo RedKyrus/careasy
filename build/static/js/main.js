@@ -223,11 +223,12 @@ let scrollMoveEvent = () =>{
     
     if(target === null) return;
 
-    console.dir(target);
-    let pos = target.offsetTop - 20;
+    //console.dir(target);
+    
 
     btn.addEventListener("click",()=>{
       //window.scrollTo({top:pos, behavior:'smooth'});
+      let pos = target.offsetTop - 20;
       window.scrollTo({top:pos, behavior:'smooth'});
     });
   });
