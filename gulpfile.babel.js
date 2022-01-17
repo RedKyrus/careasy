@@ -44,23 +44,23 @@ const routes = {
     pug: {
         watch: "src/**/*.pug",
         src: ["src/pages/**/*.pug", "!src/@(include|template)/*.pug",],
-        dest: "docs/"
+        dest: "build/"
     },
     img: {
         watch: "src/img/**/*",
         src: "src/img/**/*",
-        dest: "docs/img/"
+        dest: "build/img/"
     },
     scss: {
         watch: "src/assets/scss/**/*.scss",
         src: "src/assets/scss/**/*.scss",
-        dest: "docs/static/css/"
+        dest: "build/static/css/"
     },
     js: {
         watch: "src/assets/**/*.js",
         src: ["src/assets/js/**/!(_)*.js","!src/assets/js/lib/*.js"],
         lib: "src/assets/js/?(lib)/**/*.js",
-        dest: "docs/static/js/"
+        dest: "build/static/js/"
     },
     root:{
       bulid:"build",
@@ -117,7 +117,7 @@ const bSyncInfo = () =>{
         startPath: "/",
         //notify: false,
         server: {
-            baseDir: "./docs"
+            baseDir: "./build"
         }
     });
 }
@@ -131,7 +131,7 @@ const watch = () =>{
 
 const ghDeploy = () => gulp.src("build/**/*").pipe(ghPages());
 
-export const clean = () => del([routes.root.gitDocs]);
+export const clean = () => del([routes.root.bulid]);
 
 
 //
