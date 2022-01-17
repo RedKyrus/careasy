@@ -186,7 +186,6 @@ let modalCloseEvent =() =>{
   
   btnCloseList.forEach(btn =>{
     let tagetModal = btn.closest(".modal-wrap");
-    console.log(tagetModal);
     btn.addEventListener("click", ()=>{
       tagetModal.classList.remove("modal-show");  
     });

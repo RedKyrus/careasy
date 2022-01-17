@@ -4,25 +4,25 @@
     .title-area{
       .title-main{
         font-size: toRem(62);
-        
-        
+
       }
       .title-sub{
-        font-size: toRem(22);
+        font-size: toRem(32);
       }
     }
   
     .title-partner{
    
       .title-logo{
-   
+        
       }
     }
   }
   
   .sect{
     padding: 0 toRem(40);
-    padding-top: toRem(80);
+    padding-top: toRem(46);
+    padding-bottom: toRem(66);
     .sect-container{
       width: 100%;
     }
@@ -68,6 +68,7 @@
         }
       }
       .text-area{
+        padding-left: toRem(48);
         .title-main{
           font-size: toRem(62);
           margin-top: toRem(36);
@@ -98,6 +99,7 @@
     }
 
     .in-info-area{
+      margin-top: toRem(26);
       input{
         height: toRem(76);
         font-size: toRem(30);

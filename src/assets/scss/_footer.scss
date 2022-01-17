@@ -20,10 +20,23 @@
 
 .footer-info{
   margin-top:42px;
+
+}
+
+.copy-text-cont{
+  p{
+    color: #696969;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .copyright{
+    margin-top: 14px;
+  }
 }
 
 .footer-snsicon-cont{
   margin-top: 43px;
+  
   .snsicon-ul{
     display: flex;
     justify-content: center;

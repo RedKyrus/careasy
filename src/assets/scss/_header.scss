@@ -79,6 +79,8 @@
 
 @media (max-width:$mobileBaseMaxSize) {
   .header{
+    padding-top: 0;
+    padding-bottom: toRem(40);
     .header-bg{
       height: toRem(2000);
     }
@@ -89,13 +91,27 @@
     }
   }
 
+  .header-logo{
+    padding-top: toRem(24);
+    padding-bottom: toRem(30);
+    background-color: #fff;
+    &>img{
+      display: block;
+    }
+  }
+
   .top-menu-content{
+    padding-top: toRem(38);
+    justify-content: center;
     .top-menu-ul{
-     
+      
       &>li{
         padding:0 toRem(16);
         &::after{
           content: none;
+        }
+        a{
+          font-size: toRem(30);
         }
       }
     }
