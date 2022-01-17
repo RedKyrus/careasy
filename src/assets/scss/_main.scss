@@ -51,6 +51,7 @@
 
 .sect-youtube{
   background-color: #ECEAEF;
+  padding-bottom: 112px;
 }
 
 .sect-partner{
@@ -61,13 +62,45 @@
   margin-top: 70px;   
 }
 
-
-.youtube-frame{
-  width: 500px;
-  height: 300px;
+.youtube-contents{
+  margin-top: 50px;
+  
   border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  .youtube-area{
+    position: relative;
+    width: 48%;
+    //padding-top: 56.25%;
+    .youtube-box{
+      position: relative;
+      padding-top: 56.25%;
+      width: 100%;
+      //height: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      .youtube-frame{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+  }
+  .youtube-text{
+    padding-top: 22px;
+    color: #747474;
+    font-size: 24px;
+  }
+  
 }
-
+.ytp-show-cards-title{
+  display: none !important;
+}
+ 
 
 .sect-ad-bottom{
   height: 268px;

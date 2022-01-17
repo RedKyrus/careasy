@@ -79,6 +79,8 @@ let onready = () =>{
 
   scrollMoveEvent();
 
+  youtubeControll();
+
   window.addEventListener('resize', rearrangementSpecial)
 
 }
@@ -232,4 +234,10 @@ let scrollMoveEvent = () =>{
       window.scrollTo({top:pos, behavior:'smooth'});
     });
   });
+
+
 }
+
+
+let youtubeControll = () =>{}
+
