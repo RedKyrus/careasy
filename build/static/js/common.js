@@ -9,10 +9,7 @@ window.addEventListener('DOMContentLoaded', () =>{
 
   topAdCloseEvent();
 
-
   scrollMoveEvent();
-
-  youtubeControll();
 
 }
 );

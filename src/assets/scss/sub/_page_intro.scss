@@ -1,12 +1,43 @@
-.intro-sect-cont01{
-  background-image: url("../../img/sub/intro/page_intro_cont01.jpg");
+@mixin bgImg($url){
+  background-image: url($url);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
+}
+
+.intro-sect-cont01{
+  @include bgImg("../../img/sub/intro/page_intro_cont01.jpg");
+  height: 1749px;
+  .sect-content{ 
+  }
+}
+.intro-sect-cont02{
+  @include bgImg("../../img/sub/intro/page_intro_cont02.jpg");
   height: 863px;
+  .sect-content{ 
+  }
+
+  .intro-sect-cont03{
+    
+    .sect-content{ 
+    }
+  }
+}
+.intro-sect-cont04{
+  @include bgImg("../../img/sub/intro/page_intro_cont04.jpg");
+  height: 1749px;
+  .sect-content{ 
+  }
+}
+.intro-sect-cont05{
+  @include bgImg("../../img/sub/intro/page_intro_cont05.jpg");
+  height: 853px;
   .sect-content{ 
   }
 }
 
-.intro-sect-cont04{
-
+.intro-sect-cont06{
+  @include bgImg("../../img/sub/intro/page_intro_cont06.jpg");
+  height: 2257px;
+  .sect-content{ 
+  }
 }
