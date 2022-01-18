@@ -59,6 +59,24 @@ mixin modalFrame(modalName)
 //자사모집
 +modalFrame("branch")
   button(type="button" class="btn-close fn-close-modal")
-  p 파트너 모집
-  p 카미닛과 함께 쉽고<br> 빠르게 영업하세요.
+  p.title-main 파트너 모집
+  p.title-sub 카미닛과 함께 쉽고<br> 빠르게 영업하세요~!
+  p.title-ment 영업이 어렵게만 느껴지시나요?<br>온라인 DB, 영업노하우 제공<br>(신차영업, 장기렌트, 리스 경력자 우대)
+  ul.branch-cont
+    li 
+      div.img-box: img(src=`${imgPath}/modal/branch_img01.png`, alt="이미지")
+      div.bar 
+      p.ment-main 경차부터 승합차,<br>외제차까지!
+      p.ment-sub 최신차량, 외제차 등 많은<br>매물 보유 중입니다.<br>원하시는 모델로 친절상담 해드립니다.
+    li
+      div.img-box: img(src=`${imgPath}/modal/branch_img02.png`, alt="이미지")
+      div.bar 
+      p.ment-main 비전이 밝은<br>장기렌터카 사업
+      p.ment-sub 요즘은 장기렌트카의 시대입니다.<br>틈새시장에 발 빠르게 진입 해 함께 <br>대박나실 새 사업주 분들을 모습니다.
+
+
+  div.tel-box
+    div.icon-tel: img(src=`${imgPath}/modal/icon_tel.png`, alt="아이콘")
+    p.tel-num 02<span class="bracket">)</span> 6937<span class="minus">-</span>0689
+
   
