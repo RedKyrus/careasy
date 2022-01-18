@@ -4,6 +4,12 @@ mixin modalFrame(modalName)
       div.modal-content(class=`modal-${modalName}-cont`)
         block
 
+mixin inputText(plaName, className)
+  input(type="text" class=className autocomplete='off' placeholder=plaName)
+    
+
+mixin inputTel(plaName, className)
+  input(type="tel" class=className autocomplete='off' placeholder=plaName)
 
 
 //모달-견적신청

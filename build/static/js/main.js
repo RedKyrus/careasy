@@ -1,5 +1,9 @@
 let onready = () =>{
 
+  mainHeaderBgControll();
+
+
+
   const slideRelesePath =".slide-cont-release "
   const slideSpecialPath =".slide-cont-special "
 
@@ -90,7 +94,7 @@ let rearrangementSpecial = function(){
 
   if((winW > 750) && isRsizePcReady){
 
-    if (self.name != 'reload') {
+    if (self.name != 'reload' && isReloadReady) {
       
       self.name = 'reload';
       self.location.reload(true);
@@ -157,6 +161,17 @@ let rearrangementSpecial = function(){
   }
 }
 
+let mainHeaderBgControll = () =>{
+  // let headerBg = document.querySelector(".header .header-bg");
+  // let sectIntro = document.querySelector(".page-main .sect-intro");
+
+  // let finalHeight = headerBg.offsetHeight + sectIntro.offsetHeight;
+  // headerBg.style.height = String(finalHeight) + 'px';
+  // console.dir(headerBg.style);
+
+  let headerBg = document.querySelector(".header .header-bg");
+  headerBg.classList.add("header-bg-main-h");
+}
 
 let youtubeControll = () =>{}
 
