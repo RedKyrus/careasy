@@ -17,8 +17,9 @@ mixin reivewArea(name, rankNum, reviewTitle, reviewText, reviewImgPath)
 
 block content
   main(class="wrap-container page-sub-review")
-    div(class="")
-     div(class="") 고객후기
+    div(class="page-top-title-area page-top-title-area-review")
+      div(class="page-sub-bg")
+      p(class="page-top-title") 고객 후기
     section(class="sect sect-review review-sect-main")
       div(class="sect-container")
         ul(class="review-ul")
@@ -28,6 +29,7 @@ block content
           +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
           +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기테스트후기 테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
           +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
+
 
         //페이징
         div(class="paging-btn-area")

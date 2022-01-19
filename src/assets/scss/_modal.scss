@@ -318,6 +318,30 @@
     text-align: center;
     border-radius: 20px;
     position: relative;
+    padding: 0 40px;
+    padding-top: 20px;
+    padding-bottom: 46px;
+    .review-title{
+      color: #515151;
+      font-size: 35px;
+      font-weight: 500;
+    }
+    .img-area{
+      margin-top: 34px;
+    }
+    .review-text{
+      color: #4c4c4c;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .rank-area{
+      border-top: 1px solid #d8d8d8;
+      margin-top: 28px ;
+      display: flex;
+
+    }
+
     .btn-close{
       z-index: 1;
       position: absolute;
