@@ -318,28 +318,67 @@
     text-align: center;
     border-radius: 20px;
     position: relative;
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 14px;
     padding-top: 20px;
     padding-bottom: 46px;
+
+    .review-area{
+      margin-top: 34px;
+      height: 540px;
+      overflow: auto;
+      scrollbar-color: #fff #dfdfdf;
+      scrollbar-width: thin;
+      padding-right: 38px;
+      &::-webkit-scrollbar{
+        width: 10px;
+        //background-color: black;
+      }
+      &::-webkit-scrollbar-thumb{
+        border-radius: 4px;
+        background-color: #dfdfdf;
+      }
+      
+    }
+
     .review-title{
       color: #515151;
       font-size: 35px;
       font-weight: 500;
+      padding-right: 46px;
     }
     .img-area{
-      margin-top: 34px;
+      border-radius: 30px;
+      height: 268px;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
     }
     .review-text{
+      margin-top: 60px;
       color: #4c4c4c;
-      line-height: 1.5;
+      line-height: 1.6;
       text-align: left;
+      letter-spacing: -0.09em;
+    }
+
+    .bar{
+      background-color: #d8d8d8;
+      width: 91%;
+      height: 1px;
     }
 
     .rank-area{
-      border-top: 1px solid #d8d8d8;
-      margin-top: 28px ;
+      padding-top: 18px;
+      margin-top: 28px;
       display: flex;
-
+      .rank{
+        margin-left: 14px;
+        img{
+          margin: 0 1px;
+        }
+      }
     }
 
     .btn-close{
@@ -351,8 +390,8 @@
       width: 30px;
       height: 30px;
       display: inline-block;
-      top: 5px;
-      right: 5px;
+      top: 10px;
+      right: 10px;
       &::after, &::before{
         content: "";
         position: absolute;

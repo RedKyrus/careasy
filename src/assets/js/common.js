@@ -10,11 +10,12 @@ window.addEventListener('DOMContentLoaded', () =>{
 
   topAdCloseEvent();
 
-  scrollMoveEvent();
-
 }
 );
 
+window.addEventListener('load',()=>{
+  scrollMoveEvent();
+});
 
 
 
@@ -66,26 +67,41 @@ let topAdCloseEvent =() =>{
 }
 
 let scrollMoveEvent = () =>{
+
+  let storageKeyName ="scrollMoveTargetID";
+  
+  let getTargetID = localStorage.getItem(storageKeyName);
+  console.log(getTargetID);
+  
+  if(getTargetID != null){
+    let getTarget = document.querySelector(`[data-scroll-id='${getTargetID}']`);
+    scrollMoveAction(getTarget);
+    console.log(getTarget);
+    localStorage.removeItem(storageKeyName);
+  }
+
   let btnTrigger = document.querySelectorAll("[data-scroll-target]");
-  //let tagetList = document.querySelectorAll("[data-scroll-id]");
-  
-  
 
   btnTrigger.forEach(btn=>{
     let targetID = btn.getAttribute("data-scroll-target");
-    let target = document.querySelector(`[data-scroll-id='${targetID}']`);
-    
-    if(target === null) return;
 
-    //console.dir(target);
-    
+    btn.addEventListener("click",(event)=>{
+      
+      let target = document.querySelector(`[data-scroll-id='${targetID}']`);
+      if(target === null){
+        localStorage.setItem(storageKeyName, targetID);
+        return;
+      }
 
-    btn.addEventListener("click",()=>{
-      //window.scrollTo({top:pos, behavior:'smooth'});
-      let pos = target.offsetTop - 20;
-      window.scrollTo({top:pos, behavior:'smooth'});
+      event.preventDefault();
+      scrollMoveAction(target);
     });
+
   });
 
+}
 
+let scrollMoveAction = (target) =>{
+  let pos = target.offsetTop - 20;
+  window.scrollTo({top:pos, behavior:'smooth'});
 }
