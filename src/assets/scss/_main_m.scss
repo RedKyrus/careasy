@@ -29,6 +29,11 @@
     
   }
 
+  .sect-release, .sect-special{
+    padding-left: toRem(8);
+    padding-right: toRem(8);
+  }
+
   [class*="sect-ad"]{
     padding-top: 0;
     padding: 0;
@@ -140,6 +145,8 @@
     }
   }
 
+
+
   .review-ul{
     //justify-content: space-around;
     .review-area{
@@ -152,7 +159,27 @@
           width: 100%;
         }
       }
+      .review-title{
+        margin-top: toRem(22);
+        font-size: toRem(26);
+      }
+      .review-text{
+        font-size: toRem(21);
+      }
+      .rank-area{
+        .icon-people{
+          img{
+            width: toRem(48);
+          }
+        }
+        .name{
+          font-size: toRem(22);
+        }
+        .rank{
+
+        }
+      }
     }
-  }
   
+  }
 }

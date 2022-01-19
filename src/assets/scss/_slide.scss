@@ -197,3 +197,76 @@
   row-gap: 50px;
   column-gap: 26px;
 }
+
+
+@media (max-width:$mobileBaseMaxSize){
+  .slide-cont{
+    margin-top: toRem(56);
+
+    .swiper{
+      width: toRem(660);
+    }
+  
+    .slide-pagination{
+      margin-top: toRem(40);
+      .swiper-pagination-bullet{
+        width: toRem(20);
+        height: toRem(20);
+        margin: 0 8px !important;
+      }
+    }
+  }
+  
+  .car-info-area{
+    .info-box{
+
+      border-radius: toRem(30);
+      padding-top: toRem(18);
+      padding-bottom: toRem(20);
+  
+      .car-top{
+        padding:0 toRem(22);
+        .car-num{
+          font-size: toRem(40);
+        }
+        .car-icon{
+          img{
+            width: toRem(132);
+          }
+        }
+      }
+  
+      .car-info{
+        padding:0 toRem(22);
+
+        .car-name{
+          font-size: toRem(32);
+        }
+        .car-deposit{
+          margin-top: toRem(8);
+          font-size: toRem(26);
+        }
+        .car-price{
+          margin-top: toRem(4);
+          font-size: toRem(38);
+        }
+        .car-tip{
+          margin-top: toRem(10);
+          font-size: toRem(22);
+        }
+      }
+  
+  
+      .btn-quote{
+        font-size: toRem(32);
+        height: toRem(64);
+        border-radius: toRem(30);
+        margin-top: toRem(20);
+        display: flex;
+        justify-content: center;
+        padding-top: toRem(13);
+      }
+    }
+  }
+  
+}

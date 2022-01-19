@@ -13,7 +13,7 @@ let onready = () =>{
     loop: true,
     slidesPerView: 2,
     slidesPerGroup: 2,
-    spaceBetween: 26,
+    spaceBetween: 12,
   
     // // If we need pagination
     pagination: {
@@ -29,9 +29,10 @@ let onready = () =>{
     },
 
     breakpoints: {
-      750:{
+      751:{
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 26,
 
       }
     }
@@ -47,7 +48,7 @@ let onready = () =>{
     loop: true,
     slidesPerView: 2,
     slidesPerGroup: 2,
-    spaceBetween: 26,
+    spaceBetween: 12,
 
     // // If we need pagination
     pagination: {
@@ -63,7 +64,7 @@ let onready = () =>{
     },
   
     breakpoints: {
-      750:{
+      751:{
         slidesPerView: 1,
         slidesPerGroup: 1,
         //spaceBetween: 26,
@@ -171,6 +172,7 @@ let mainHeaderBgControll = () =>{
 
   let headerBg = document.querySelector(".header .header-bg");
   headerBg.classList.add("header-bg-main-h");
+
 }
 
 let youtubeControll = () =>{}
