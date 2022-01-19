@@ -94,7 +94,7 @@ let rearrangementSpecial = function(){
 
   if((winW > 750) && isRsizePcReady){
 
-    if (self.name != 'reload' && isReloadReady) {
+    if (self.name != 'reload' && isRsizeMobileReady == false) {
       
       self.name = 'reload';
       self.location.reload(true);

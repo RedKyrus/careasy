@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("quote");
   modalOpenEvent("complete");
   modalOpenEvent("branch");
+  modalOpenEvent("review");
 
   modalCloseEvent();
 
@@ -23,7 +24,8 @@ let modalOpenEvent = (modalname) =>{
   
   let openModal= () =>{
     tagetModal.classList.add("modal-show");
-    console.log(modalname, "작동");
+    document.body.classList.add("modal-open-scroll-stop")
+    //console.log(modalname, "작동");
   }
 
   btnOpenList.forEach(btn =>{
@@ -39,7 +41,12 @@ let modalCloseEvent =() =>{
   btnCloseList.forEach(btn =>{
     let tagetModal = btn.closest(".modal-wrap");
     btn.addEventListener("click", ()=>{
-      tagetModal.classList.remove("modal-show");  
+      tagetModal.classList.remove("modal-show");
+      let isShowModal = document.querySelector(".modal-show");
+      if(isShowModal == null){
+        document.body.classList.remove("modal-open-scroll-stop")
+      }
+      
     });
   });
   

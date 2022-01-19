@@ -3,7 +3,7 @@ extends ../../template/layout_sub
 mixin reivewArea(name, rankNum, reviewTitle, reviewText, reviewImgPath)
   -let star="";
   li.review-area
-    div.img-area: img(src=`${imgPath}${reviewImgPath}`, alt="이미지")
+    div(class="img-area fn-open-modal-review"): img(src=`${imgPath}${reviewImgPath}`, alt="이미지")
     p.review-title #{reviewTitle}
     p.review-text  #{reviewText}
     div.rank-area
@@ -19,12 +19,28 @@ block content
   main(class="wrap-container page-sub-review")
     div(class="")
      div(class="") 고객후기
-    section(class="sect sect-review")
+    section(class="sect sect-review review-sect-main")
       div(class="sect-container")
-        div(class="go-area")
-          a(href="#none" class="go-page-review") 더보기 ▶
         ul(class="review-ul")
           +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나",  "/review/review01.png")
           +reivewArea("정*민",5,"테슬라 모델3 출고 후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...",  "/review/review01.png")
           +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나",  "/review/review01.png")
           +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
+          +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기테스트후기 테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
+          +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
+
+        //페이징
+        div(class="paging-btn-area")
+          button(type="button" class="paging-btn paging-btn-first") 
+            img(src=`${imgPath}/common/paging_arrow_left_duble.png`, alt="처음 페이지")
+          button(type="button" class="paging-btn paging-btn-prev")
+            img(src=`${imgPath}/common/paging_arrow_left.png`, alt="이전 페이지")
+          
+          div(type="button" class="paging-btn-num-box")
+            -for(let i=0;i<5;i++)
+              button(type="button" class="paging-btn") #{i+1}
+          
+          button(type="button" class="paging-btn paging-btn-next")
+            img(src=`${imgPath}/common/paging_arrow_left.png`, alt="다음 페이지")
+          button(type="button" class="paging-btn paging-btn-last")
+            img(src=`${imgPath}/common/paging_arrow_left_duble.png`, alt="끝 페이지")

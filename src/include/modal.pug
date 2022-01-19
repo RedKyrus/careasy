@@ -85,4 +85,10 @@ mixin inputTel(plaName, className)
     div.icon-tel: img(src=`${imgPath}/modal/icon_tel.png`, alt="아이콘")
     p.tel-num 02<span class="bracket">)</span> 6937<span class="minus">-</span>0689
 
-  
+//리뷰 오픈
++modalFrame("review")
+  button(type="button" class="btn-close fn-close-modal")
+
+  p.review-title 제네시스 G80 출고후기
+  div(class="img-area fn-open-modal-review"): img(src=`${imgPath}/review/review01.png`, alt="이미지")
+  p.review-text  

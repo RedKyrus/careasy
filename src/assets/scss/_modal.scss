@@ -2,6 +2,10 @@
   display: block !important;
 }
 
+.modal-open-scroll-stop{
+    overflow: hidden;
+}
+
 .modal-wrap{
   display: none;
   z-index: 10;
@@ -279,6 +283,49 @@
       overflow: hidden;
       width: 36px;
       height: 36px;
+      display: inline-block;
+      top: 5px;
+      right: 5px;
+      &::after, &::before{
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 3px;
+        height: 18px;
+        border-radius: 1px;
+        top: 50%;
+        left: 50%;
+        //transform: rotate(45deg);
+      }
+  
+      &::after{
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+      &::before{
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+    }
+  }
+}
+
+
+//모달 지사모집
+.modal-review{
+  //display: block;
+  .modal-review-cont{
+    background-color: #fff;
+    width: 580px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    .btn-close{
+      z-index: 1;
+      position: absolute;
+      background-color: #7e7e7e;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 30px;
+      height: 30px;
       display: inline-block;
       top: 5px;
       right: 5px;
