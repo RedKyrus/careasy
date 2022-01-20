@@ -86,8 +86,12 @@
     padding-top: 0;
     padding-bottom: toRem(40);
     .header-bg{
+      //height: 100%;
+    }
+    .header-bg-main-h{
       height: toRem(2000);
     }
+    
     .header-container{
       width: 100%;
       display: block;

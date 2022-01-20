@@ -117,7 +117,7 @@ const bSyncInfo = () =>{
         startPath: "/",
         //notify: false,
         server: {
-            baseDir: "./build"
+            baseDir: "./build/"
         }
     });
 }

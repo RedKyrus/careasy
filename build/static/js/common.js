@@ -71,12 +71,12 @@ let scrollMoveEvent = () =>{
   let storageKeyName ="scrollMoveTargetID";
   
   let getTargetID = localStorage.getItem(storageKeyName);
-  console.log(getTargetID);
+  // /console.log(getTargetID);
   
   if(getTargetID != null){
     let getTarget = document.querySelector(`[data-scroll-id='${getTargetID}']`);
     scrollMoveAction(getTarget);
-    console.log(getTarget);
+    //console.log(getTarget);
     localStorage.removeItem(storageKeyName);
   }
 
