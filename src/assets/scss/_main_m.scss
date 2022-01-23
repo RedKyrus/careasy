@@ -67,6 +67,7 @@
     //width: toRem(664);
     border-radius: toRem(36);
     .intro-main{
+      border-radius: toRem(37);
       .bg-area{
         img{
           width: 100%;
@@ -107,7 +108,14 @@
       margin-top: toRem(26);
       input{
         height: toRem(76);
+        margin-bottom: toRem(8);
+        border-radius: toRem(0);
+        padding-left: toRem(18);
         font-size: toRem(30);
+
+        &:last-of-type{
+          margin-bottom: toRem(22);
+        }
       }
     }
 
@@ -121,9 +129,10 @@
       }
       .check-agree-label{
         //padding-top: toRem(2);
-        font-size: toRem(28);
+        font-size: toRem(30);
         line-height: 1.2;
         &::before{
+          margin-right: toRem(8);
           line-height: 1.1;
           width: toRem(42);
           height: toRem(42);
@@ -131,10 +140,12 @@
       }
   
       .btn-show{
+        margin-left: toRem(14);
         width: toRem(88);
         height: toRem(42);
         font-size: toRem(28);
         padding-top: toRem(6);
+        border-radius: toRem(10);
       }
     }
 
@@ -142,6 +153,8 @@
       height: toRem(85);
       padding-top: toRem(20);
       font-size: toRem(38);
+      margin-top: toRem(30);
+      border-radius: toRem(40);
     }
   }
 
