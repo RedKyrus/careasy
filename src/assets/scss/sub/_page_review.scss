@@ -87,3 +87,44 @@
     }
   }
 }
+
+
+@media (max-width:$mobileBaseMaxSize) {
+  .review-sect-main{
+    padding-bottom: toRem(100);
+    padding-top: 0;
+    .paging-btn-area{
+      display: none;
+    }
+    .review-ul{
+      margin-top: 0;
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: toRem(52);
+      .review-area{
+        width: 100%;
+        
+        .img-area{
+          height: toRem(356);
+        }
+        .review-title{
+          font-size: toRem(35);
+        }
+        .review-text{
+          font-size: toRem(25);
+        }
+        .rank-area{
+          margin-top: toRem(24);
+          .icon-people{
+            img{
+              width: toRem(52);
+            }
+          }
+          .name{
+            color: #4c4c4c;
+          }
+        }
+      }
+    }
+  }
+
+}

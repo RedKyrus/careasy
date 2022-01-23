@@ -27,3 +27,20 @@
     text-align: center;
   }
 }
+
+
+@media (max-width:$mobileBaseMaxSize) {
+  .wrap-container{
+    .page-top-title-area{
+      background: none;
+      height: toRem(158);
+      .page-sub-bg{
+        background: none;
+      }
+      .page-top-title{
+        color: #6b6b6b;
+        font-size: toRem(62);
+      }
+    }
+  }
+}

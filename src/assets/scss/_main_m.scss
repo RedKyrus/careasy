@@ -176,7 +176,10 @@
           font-size: toRem(22);
         }
         .rank{
-
+          .img-rank-star{
+            width: toRem(22);
+            margin-right: toRem(2);
+          }
         }
       }
     }
