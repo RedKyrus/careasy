@@ -48,5 +48,45 @@
 
 
 @media (max-width:$mobileBaseMaxSize) {
+  .footer{
+    padding-bottom: toRem(180);
+    img{
+
+    }
+    .footer-container{
+    
+    
+    }
   
+  
+    .footer-logo{
+      padding-top: toRem(30);
+      padding-bottom: toRem(24);
+    }
+  }
+  
+  .footer-info{
+    margin-top: toRem(42);
+  }
+  
+  .copy-text-cont{
+    p{
+      font-size: toRem(22);
+    }
+    .copyright{
+      margin-top: toRem(14);
+    }
+  }
+  
+  .footer-snsicon-cont{
+    margin-top: toRem(50);
+    
+    .snsicon-ul{
+      display: flex;
+      justify-content: center;
+      &>li{
+        margin-right: toRem(16);
+      }
+    }
+  }
 }
