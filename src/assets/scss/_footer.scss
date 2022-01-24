@@ -86,6 +86,9 @@
       justify-content: center;
       &>li{
         margin-right: toRem(16);
+        img{
+          width: toRem(70);
+        }
       }
     }
   }
