@@ -82,9 +82,7 @@
           justify-content: space-between;
           align-items: center;
           padding: 5px 0;
-          &:not(:last-of-type){
-            border-bottom: 1px solid #5d8ac3;
-          }
+          
           .p-type{
             font-size: 20px;
             color: #4c4c4c;
@@ -97,6 +95,7 @@
           }
         }
       }
+      
 
 
       // .car-deposit{
@@ -157,10 +156,17 @@
       }
       .car-deposit{
         color: #4c4c4c;
-        
       }
     }
     .car-info{
+      .car-price-ul{
+       
+        li{
+          &:not(:last-of-type){
+            border-bottom: 1px solid #b18bd1;
+          }
+        }
+      }
       .p-price{
         color: #6e2aa8;
       }
@@ -204,6 +210,13 @@
       }
     }
     .car-info{
+      .car-price-ul{
+        li{
+          &:not(:last-of-type){
+            border-bottom: 1px solid #5d8ac3;
+          }
+        }
+      }
       .p-price{
         color: #1b497e;
       }
