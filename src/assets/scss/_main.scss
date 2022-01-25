@@ -16,6 +16,7 @@
   .title-partner{
     display: flex;
     justify-content: center;
+    align-items: center;
     .title-logo{
       margin-right: 25px;
     }
@@ -72,6 +73,9 @@
     position: relative;
     width: 48%;
     //padding-top: 56.25%;
+    img{
+      width: 100%;
+    }
     .youtube-box{
       position: relative;
       padding-top: 56.25%;
@@ -276,14 +280,17 @@
 
 
 .sect-review{
-    .go-page-review{
-      margin-top: 72px;
-      display: block;
-      text-align: right;
-      color: #4a4a4a;
-      font-size: 17px;
-      font-weight: 500;
-    }
+  border-bottom: 1px solid #dfd3e1;
+  padding-bottom: 108px;
+  .go-page-review{
+    margin-top: 72px;
+    display: block;
+    text-align: right;
+    color: #4a4a4a;
+    font-size: 17px;
+    font-weight: 500;
+  }
+    
 }
 
 .review-ul{
@@ -336,5 +343,6 @@
     }
 
   }
+
 }
 

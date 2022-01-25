@@ -19,6 +19,7 @@ mixin inputText(plaName, className)
 mixin inputTel(plaName, className)
   input(type="tel" class=className autocomplete='off' placeholder=plaName)
 
+
 mixin slideListRelese()
   -for (let i= 0; i < 6; i++)
     -let num= i+1;
@@ -37,7 +38,35 @@ mixin slideListRelese()
         p.car-tip (세금/보험료/방문정비 포함)
         button(type="button" class="btn-quote") 견적신청하기
 
+mixin ReleseInfobox(num, carName, price01=0, price02=0)
+  if (num < 10)
+    -num= "0" + num
+  
+  a(class="swiper-slide info-box" href="#none")
+    div.car-top
+      p.car-num #{num}
+      p.car-icon: img(src=`${imgPath}/main/icon_special.png`, alt="아이콘")
+    div.img-area: img(src=`${imgPath}/car/car_relese${num}.png`, alt="자동차이미지")
+    div.car-info
+      p.car-name #{carName}
+      ul.car-price-ul
+        li.price-deposit
+          p.p-type 보증금 30%
+          p.p-price #{price01.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-normal
+          p.p-type 무보증
+          p.p-price #{price02.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+      p.car-tip (세금/보험료/방문정비 포함)
+      button(type="button" class="btn-quote") 견적신청하기
 
+
+mixin slideListRelese02()
+  +ReleseInfobox("1","카니발9인승 디젤","424050","457160")
+  +ReleseInfobox("2","카니발9인승 디젤","415800","443300")
+  +ReleseInfobox("3","카니발9인승 디젤","727760","791670")
+  +ReleseInfobox("4","캐스퍼","312200","330600")
+  +ReleseInfobox("5","아반떼","311960","330300")
+  +ReleseInfobox("6","투산","399080","431750")
 
 mixin SpecialInfobox(num)
   a(class="swiper-slide info-box")
@@ -51,6 +80,45 @@ mixin SpecialInfobox(num)
       p.car-price 월42만원대
       p.car-tip (세금/보험료/방문정비 포함)
       button(type="button" class="btn-quote") 견적신청하기
+
+mixin SpecialInfobox02(num, carName, price01=0, price02=0, price03=0)
+  if (num < 10)
+    -num= "0" + num
+  
+  a(class="swiper-slide info-box" href="#none")
+    div.car-top
+      p.car-num #{num}
+      p.car-icon: img(src=`${imgPath}/main/icon_special.png`, alt="아이콘")
+    div.img-area: img(src=`${imgPath}/car/car_special${num}.png`, alt="자동차이미지")
+    div.car-info
+      p.car-name #{carName}
+      ul.car-price-ul
+        li.price-advance
+          p.p-type 선수금 30%
+          p.p-price #{price01.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-deposit
+          p.p-type 보증금 30%
+          p.p-price #{price02.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-normal
+          p.p-type 무보증
+          p.p-price #{price03.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+      p.car-tip (세금/보험료/방문정비 포함)
+      button(type="button" class="btn-quote") 견적신청하기
+
+
+mixin slideListSpecial03()
+  +SpecialInfobox02("1","카니발9인승 디젤","275880","451000","506600")
+  +SpecialInfobox02("2","K8 2.5 가솔린","279210","474980","517600")
+  +SpecialInfobox02("3","쏘렌토 1.6 가솔린","","")
+  +SpecialInfobox02("4","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("4","GV80 2.5 터보","","")
+  +SpecialInfobox02("6","아이오닉 전기차","","")
+  +SpecialInfobox02("7","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("8","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("9","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("10","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("11","그랜저 2.5 가솔린","","")
+  +SpecialInfobox02("12","그랜저 2.5 가솔린","","")
 
 
 mixin slideListSpecial02()
@@ -104,7 +172,9 @@ mixin reivewArea(name, rankNum, reviewTitle, reviewText, reviewImgPath)
           //-star+="★"
           img(src=`${imgPath}/common/icon_rank_star.png` class="img-rank-star")
         
-      
+
+
+//-==HTML==
 block content
   main(class="wrap-container page-main")
     section(class="sect sect-intro")
@@ -138,7 +208,7 @@ block content
         +titleMainSubAndScrollID("즉시출고차량","차량을 기다리지 않고 계약 즉시 받을 수 있는 차량!", "release")  
 
         //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
-        +slideArea("slide-cont-release", "car-info-style-purple", "slideListRelese")
+        +slideArea("slide-cont-release", "car-info-style-purple", "slideListRelese02")
   
         
     section(class="sect sect-ad-middle")
@@ -152,25 +222,26 @@ block content
         +titleMainSubAndScrollID("이달의 특가차량","이달의 특가로 저렴하게 렌트할 수 있는 차량!","special")
 
         //- 슬라이드부분(상위 클래스이름, 클래스 스타일 이름, 슬라이드상자형식(함수이름))
-        //-+slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial")
-        +slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial02")
+        +slideArea("slide-cont-special", "car-info-style-blue", "slideListSpecial03")
 
     section(class="sect sect-youtube")
       div(class="sect-container")
         div(class="title-area")
-          p(class="title-main")
+          p(class="title-main img-title")
             img(src=`${imgPath}/main/title_youtube.png`, alt="유튜브 제목")
           p(class="title-sub") 유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.
         div(class="youtube-contents")
           div(class="youtube-area")
-            div(class="youtube-box")
-              //<iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            img(src=`${imgPath}/main/youtube_img01.png`, alt="이미지")
+            //div(class="youtube-box")
+              <iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             p(class="youtube-text") 카니발 구매 영상
             
-          div(class="youtube-area")
-            div(class="youtube-box")
-              //<iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          div(class="youtube-area mobile-hidden")
+            img(src=`${imgPath}/main/youtube_img02.png`, alt="이미지")
+            //div(class="youtube-box")
+              <iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
             p(class="youtube-text") 렌터카 차량 인수영상
              
@@ -183,10 +254,10 @@ block content
         div(class="go-area")
           a(href="#none" class="go-page-review mobile-hidden") 더보기 ▶
         ul(class="review-ul")
-          +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나",  "/review/review01.png")
-          +reivewArea("정*민",5,"테슬라 모델3 출고 후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...",  "/review/review01.png")
-          +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나",  "/review/review01.png")
-          +reivewArea("김*진",5,"제네시스G80 출고후기","테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 ",  "/review/review01.png")
+          +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나 ",  "/review/review01.png")
+          +reivewArea("정*민",5,"테슬라 모델3 출고후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...",  "/review/review02.png")
+          +reivewArea("이*훈",5,"스타리아 출고후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...",  "/review/review03.png")
+          +reivewArea("강*석",5,"BMW X3 출고 후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나  ",  "/review/review04.png")
 
           
 

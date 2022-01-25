@@ -198,4 +198,48 @@
     }
   
   }
+
+  .title-youtube {
+    .title-main{
+    img{
+      width: toRem(280);
+    }
+  }
+  }
+
+  .youtube-contents{
+    margin-top: toRem(50);
+    border-radius: toRem(20);
+    .youtube-area{
+      width: 100%;
+      
+      .youtube-box{
+        position: relative;
+        padding-top: 56.25%;
+        width: 100%;
+        //height: 56.25%;
+        border-radius: toRem(26);
+        .youtube-frame{
+    
+        }
+      }
+      
+    }
+    .youtube-text{
+      padding-top: toRem(22);
+      font-size: toRem(42);
+    }
+    
+  }
+
+  .page-main{
+    .title-partner{
+   
+      .title-logo{
+        margin-right: toRem(25);
+        width: toRem(180);
+      }
+    }
+  }
+  
 }

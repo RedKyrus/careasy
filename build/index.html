@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&amp;display=swap" rel="stylesheet">
     <link href="static/css/fonts/GmarketSans.css" rel="stylesheet">
     <!--base-->
     <link rel="stylesheet" href="static/css/style.css">
@@ -33,7 +34,7 @@
       <header class="header"> 
         <div class="header-bg"></div>
         <div class="header-container">
-          <div class="header-logo"><a href="index.html"><img src="img/common/logo_top.png" alt="탑로고"></a></div>
+          <div class="header-logo"><a href="index.html"><img class="mobile-hidden" src="img/common/logo_top.png" alt="탑로고"><img class="pc-hidden" src="img/common/logo_footer.png" alt="탑로고 모바일"></a></div>
           <nav class="top-menu-content">
             <ul class="top-menu-ul">
               <li><a href="intro/intro.html">카이지렌터카!</a></li>
@@ -87,82 +88,124 @@
             <div class="slide-cont slide-cont-release car-info-style-purple">
               <div class="slide-area">
                 <div class="swiper">
-                  <div class="swiper-wrapper car-info-area"><a class="swiper-slide info-box">
+                  <div class="swiper-wrapper car-info-area"><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">01</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
                       <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">카니발9인승 디젤</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">424,050원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">457,160원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">02</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_relese02.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">카니발9인승 디젤</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">415,800원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">443,300원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">03</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_relese03.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">카니발9인승 디젤</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">727,760원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">791,670원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">04</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_relese04.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">캐스퍼</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">312,200원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">330,600원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">05</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_relese05.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">아반떼</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">311,960원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">330,300원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">06</p>
-                        <p class="car-icon"><img src="img/main/icon_relese.png" alt="아이콘"/></p>
+                        <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_relese06.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%
-                          <p class="car-price">월42만원대</p>
-                        </p>
+                        <p class="car-name">투산</p>
+                        <ul class="car-price-ul">
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">399,080원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">431,750원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
                       </div></a>
@@ -189,148 +232,292 @@
             <div class="slide-cont slide-cont-special car-info-style-blue">
               <div class="slide-area">
                 <div class="swiper">
-                  <div class="swiper-wrapper car-info-area"><a class="swiper-slide info-box">
+                  <div class="swiper-wrapper car-info-area"><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">01</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special01.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">카니발9인승 디젤</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">275,880원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">451,000원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">506,600원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">02</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special02.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">K8 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">279,210원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">474,980원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">517,600원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">03</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special03.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">쏘렌토 1.6 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">04</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special04.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
-                        <p class="car-num">05</p>
+                        <p class="car-num">04</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special04.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">GV80 2.5 터보</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">06</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special06.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">아이오닉 전기차</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">07</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special07.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">08</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special08.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">09</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special09.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">10</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special10.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">11</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special11.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
-                      </div></a><a class="swiper-slide info-box">
+                      </div></a><a class="swiper-slide info-box" href="#none">
                       <div class="car-top">
                         <p class="car-num">12</p>
                         <p class="car-icon"><img src="img/main/icon_special.png" alt="아이콘"/></p>
                       </div>
-                      <div class="img-area"><img src="img/car/car_relese01.png" alt="자동차이미지"/></div>
+                      <div class="img-area"><img src="img/car/car_special12.png" alt="자동차이미지"/></div>
                       <div class="car-info">
-                        <p class="car-name">K5</p>
-                        <p class="car-deposit">보증금 30%</p>
-                        <p class="car-price">월42만원대</p>
+                        <p class="car-name">그랜저 2.5 가솔린</p>
+                        <ul class="car-price-ul">
+                          <li class="price-advance">
+                            <p class="p-type">선수금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-deposit">
+                            <p class="p-type">보증금 30%</p>
+                            <p class="p-price">원</p>
+                          </li>
+                          <li class="price-normal">
+                            <p class="p-type">무보증</p>
+                            <p class="p-price">0원</p>
+                          </li>
+                        </ul>
                         <p class="car-tip">(세금/보험료/방문정비 포함)</p>
                         <button class="btn-quote" type="button">견적신청하기</button>
                       </div></a>
@@ -346,20 +533,22 @@
         <section class="sect sect-youtube">
           <div class="sect-container">
             <div class="title-area">
-              <p class="title-main"><img src="img/main/title_youtube.png" alt="유튜브 제목"></p>
+              <p class="title-main img-title"><img src="img/main/title_youtube.png" alt="유튜브 제목"></p>
               <p class="title-sub">유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.</p>
             </div>
             <div class="youtube-contents">
-              <div class="youtube-area">
-                <div class="youtube-box">
-                  <!--<iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                </div>
+              <div class="youtube-area"><img src="img/main/youtube_img01.png" alt="이미지">
+                <!--div(class="youtube-box")
+                <iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                -->
                 <p class="youtube-text">카니발 구매 영상</p>
               </div>
-              <div class="youtube-area">
-                <div class="youtube-box">
-                  <!--<iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                </div>
+              <div class="youtube-area mobile-hidden"><img src="img/main/youtube_img02.png" alt="이미지">
+                <!--div(class="youtube-box")
+                <iframe class="youtube-frame" src="https://www.youtube.com/embed/M1EhTNvPspQ?controls=1&fs=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                -->
                 <p class="youtube-text">렌터카 차량 인수영상</p>
               </div>
             </div>
@@ -376,7 +565,7 @@
               <li class="review-area">
                 <div class="img-area"><img src="img/review/review01.png" alt="이미지"/></div>
                 <p class="review-title">제네시스G80 출고후기</p>
-                <p class="review-text"> 왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나</p>
+                <p class="review-text"> 왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나 </p>
                 <div class="rank-area">
                   <div class="icon-people"><img src="img/common/icon_people.png" alt="이미지"/></div>
                   <p class="name">김*진 고객님</p>
@@ -385,8 +574,8 @@
                 </div>
               </li>
               <li class="review-area">
-                <div class="img-area"><img src="img/review/review01.png" alt="이미지"/></div>
-                <p class="review-title">테슬라 모델3 출고 후기</p>
+                <div class="img-area"><img src="img/review/review02.png" alt="이미지"/></div>
+                <p class="review-title">테슬라 모델3 출고후기</p>
                 <p class="review-text"> 신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...</p>
                 <div class="rank-area">
                   <div class="icon-people"><img src="img/common/icon_people.png" alt="이미지"/></div>
@@ -396,23 +585,23 @@
                 </div>
               </li>
               <li class="review-area">
-                <div class="img-area"><img src="img/review/review01.png" alt="이미지"/></div>
-                <p class="review-title">제네시스G80 출고후기</p>
-                <p class="review-text"> 왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나</p>
+                <div class="img-area"><img src="img/review/review03.png" alt="이미지"/></div>
+                <p class="review-title">스타리아 출고후기</p>
+                <p class="review-text"> 신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...</p>
                 <div class="rank-area">
                   <div class="icon-people"><img src="img/common/icon_people.png" alt="이미지"/></div>
-                  <p class="name">김*진 고객님</p>
+                  <p class="name">이*훈 고객님</p>
                   <div class="rank"><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/>
                   </div>
                 </div>
               </li>
               <li class="review-area">
-                <div class="img-area"><img src="img/review/review01.png" alt="이미지"/></div>
-                <p class="review-title">제네시스G80 출고후기</p>
-                <p class="review-text"> 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 테스트후기 </p>
+                <div class="img-area"><img src="img/review/review04.png" alt="이미지"/></div>
+                <p class="review-title">BMW X3 출고 후기</p>
+                <p class="review-text"> 왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나  </p>
                 <div class="rank-area">
                   <div class="icon-people"><img src="img/common/icon_people.png" alt="이미지"/></div>
-                  <p class="name">김*진 고객님</p>
+                  <p class="name">강*석 고객님</p>
                   <div class="rank"><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/><img class="img-rank-star" src="img/common/icon_rank_star.png"/>
                   </div>
                 </div>
@@ -556,7 +745,6 @@
                 <button class="fn-open-modal-quote"><img src="img/main/aside_btn_quote.png" alt="견적 문의하기"></button>
               </li>
               <li><a href="#none"><img src="img/main/aside_btn_katalk.png" alt="카카오톡 문의"></a></li>
-              <li><a href="#none"><img src="img/main/aside_btn_lodgment.png" alt="숙박신청"></a></li>
             </ul>
           </div>
         </div>

@@ -57,7 +57,7 @@
       .car-num{
         font-family: 'Manrope', sans-serif;//기본: 400
         font-size: 40px;
-        font-weight: 500;
+        font-weight: 600;
       }
     }
 
@@ -66,7 +66,6 @@
         width: 100%;
       }
     }
-
     .car-info{
       padding:0 24px;
       text-align: left;
@@ -75,19 +74,45 @@
         font-size: 30px;
         font-weight: 500;
       }
-      .car-deposit{
-        margin-top: 8px;
-        font-size: 20px;
-        font-weight: 500;
+
+      .car-price-ul{
+        margin-top: 14px;
+        li{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 5px 0;
+          &:not(:last-of-type){
+            border-bottom: 1px solid #5d8ac3;
+          }
+          .p-type{
+            font-size: 20px;
+            color: #4c4c4c;
+            font-weight: 500;
+          }
+          .p-price{
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+          }
+        }
       }
-      .car-price{
-        margin-top: 1px;
-        font-size: 32px;
-        font-weight: 600;
-      }
+
+
+      // .car-deposit{
+      //   margin-top: 8px;
+      //   font-size: 20px;
+      //   font-weight: 500;
+      // }
+      // .car-price{
+      //   margin-top: 1px;
+      //   font-size: 32px;
+      //   font-weight: 600;
+      // }
       .car-tip{
-        margin-top: 8px;
+        margin-top: 6px;
         font-size: 16px;
+        text-align: center;
       }
     }
 
@@ -98,11 +123,12 @@
       width: 100%;
       height: 55px;
       border-radius: 28px;
-      margin-top: 18px;
+      margin-top: 10px;
     }
   }
 }
 
+//스타일 퍼플
 .car-info-style-purple{
   
   .slide-btn{
@@ -135,7 +161,7 @@
       }
     }
     .car-info{
-      .car-price{
+      .p-price{
         color: #6e2aa8;
       }
     }
@@ -148,6 +174,7 @@
   }
 }
 
+//스타일 블루
 .car-info-style-blue{
 
   .slide-btn{
@@ -177,8 +204,8 @@
       }
     }
     .car-info{
-      .car-price{
-        color: #1e5aa3;
+      .p-price{
+        color: #1b497e;
       }
     }
   }
@@ -242,14 +269,33 @@
         .car-name{
           font-size: toRem(32);
         }
-        .car-deposit{
-          margin-top: toRem(8);
-          font-size: toRem(26);
+        // .car-deposit{
+        //   margin-top: toRem(8);
+        //   font-size: toRem(26);
+        // }
+        // .car-price{
+        //   margin-top: toRem(4);
+        //   font-size: toRem(38);
+        // }
+
+        .car-price-ul{
+          margin-top: toRem(14);
+          li{
+            padding: toRem(5) 0;
+            &:not(:last-of-type){
+              border-bottom: 1px solid #5d8ac3;
+            }
+            .p-type{
+              font-size: toRem(20);
+            }
+            .p-price{
+              
+              font-size: toRem(25);
+            }
+          }
         }
-        .car-price{
-          margin-top: toRem(4);
-          font-size: toRem(38);
-        }
+
+
         .car-tip{
           margin-top: toRem(10);
           font-size: toRem(22);
