@@ -62,17 +62,37 @@
     }
   }
 
+  .sect-intro{
+    
+  }
+
   .intro-content{
     flex-direction: column;
     //width: toRem(664);
     border-radius: toRem(36);
+    
     .intro-main{
-      border-radius: toRem(37);
+      // border-radius: toRem(37);
+      width: 100%;
       .bg-area{
+        border-radius: toRem(37);
         img{
           width: 100%;
         }
       }
+
+      .intro-paging-area{
+        bottom: toRem(28);
+        .swiper-pagination-bullet{
+          width: toRem(16);
+          height: toRem(16);
+        }
+        .swiper-pagination-bullet-active{
+          
+        }
+      }
+
+
       .text-area{
         padding-left: toRem(48);
         .title-main{

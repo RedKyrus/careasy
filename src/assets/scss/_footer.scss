@@ -62,6 +62,9 @@
     .footer-logo{
       padding-top: toRem(30);
       padding-bottom: toRem(24);
+      img{
+        width: toRem(200);
+      }
     }
   }
   

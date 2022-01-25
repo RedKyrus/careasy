@@ -103,8 +103,9 @@
     padding-top: toRem(24);
     padding-bottom: toRem(30);
     background-color: #fff;
-    &>img{
-      display: block;
+    img{
+      //display: block;
+      width: toRem(200);
     }
   }
 
