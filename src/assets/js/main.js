@@ -15,16 +15,18 @@ let onready = () =>{
     loop: true,
     slidesPerView: 1,
     slidesPerGroup: 1,
-    // autoplay: true,
+    autoplay: true,
     allowTouchMove: false,
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
   
     // // If we need pagination
     pagination: {
       el: slideIntroPath+'.slide-pagination',
       clickable: true,
+      
     },
 
     grabCursor: true,
