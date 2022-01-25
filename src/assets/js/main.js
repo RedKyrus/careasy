@@ -4,8 +4,54 @@ let onready = () =>{
 
 
 
+  const slideIntroPath =".slide-intro "
   const slideRelesePath =".slide-cont-release "
   const slideSpecialPath =".slide-cont-special "
+
+
+  const swiperIntro = new Swiper(slideIntroPath+'.swiper', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+  
+    // // If we need pagination
+    pagination: {
+      el: slideRelesePath+'.slide-pagination',
+      //el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -800],
+        rotate: [180, 0, 0],
+      },
+      next: {
+        shadow: true,
+        translate: [0, 0, -800],
+        rotate: [-180, 0, 0],
+      },
+    },
+  
+
+    breakpoints: {
+      901:{
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+
+      }
+    }
+  
+  
+  });
+
+
+
 
   const swiperRelesse = new Swiper(slideRelesePath+'.swiper', {
     // Optional parameters
@@ -29,7 +75,7 @@ let onready = () =>{
     },
 
     breakpoints: {
-      751:{
+      901:{
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 26,
@@ -64,7 +110,7 @@ let onready = () =>{
     },
   
     breakpoints: {
-      751:{
+      901:{
         slidesPerView: 1,
         slidesPerGroup: 1,
         //spaceBetween: 26,
@@ -93,7 +139,7 @@ let rearrangementSpecial = function(){
   let slideSpecial = document.querySelector(".slide-cont-special .car-info-area");
   let infoBoxList = slideSpecial.getElementsByClassName("info-box");
 
-  if((winW > 750) && isRsizePcReady){
+  if((winW > 900) && isRsizePcReady){
 
     if (self.name != 'reload' && isRsizeMobileReady == false) {
       
@@ -136,7 +182,7 @@ let rearrangementSpecial = function(){
      isRsizePcReady = false;
   }
 
-  else if(winW <= 750 && isRsizeMobileReady){
+  else if(winW <= 900 && isRsizeMobileReady){
 
     // clearTimeout( timer ); 
     // timer = setTimeout(function(){
