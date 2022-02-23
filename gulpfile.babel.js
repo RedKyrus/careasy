@@ -43,7 +43,7 @@ import browserSync from "browser-sync";
 const routes = {
     pug: {
         watch: "src/**/*.pug",
-        src: ["src/pages/**/*.pug", "!src/@(include|template)/*.pug",],
+        src: ["src/pages/**/!(_)*.pug", "!src/@(include|template)/*.pug",],
         dest: "build/"
     },
     img: {
@@ -63,7 +63,7 @@ const routes = {
         dest: "build/static/js/"
     },
     root:{
-      bulid:"build",
+      build:"build",
       gitDocs:"docs"
     }
 }
@@ -131,7 +131,7 @@ const watch = () =>{
 
 const ghDeploy = () => gulp.src("build/**/*").pipe(ghPages());
 
-export const clean = () => del([routes.root.bulid]);
+export const clean = () => del([routes.root.build]);
 
 
 //

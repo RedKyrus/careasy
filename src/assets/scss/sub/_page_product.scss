@@ -1,0 +1,175 @@
+.page-sub-product{
+  //background-color: #323232; 
+  .product-sect-cont{
+    padding-top: 80px;
+    padding-bottom: 72px;
+  }
+  .sect-container{
+    width: 1140px;
+  }
+}
+
+
+.product-area{
+  background-color: #f6f6f6;
+  border: 5px solid #dfdfdf;
+  display: flex;
+  justify-content: space-between;
+  //align-items: stretch;
+  padding: 0 52px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  
+}
+
+
+.product-car-info-area{
+  width: 504px;
+  padding-top: 8px;
+  *{
+    font-family: 'GmarketSans', sans-serif;//기본굵기 400 
+    line-height: 1;
+  }
+  .car-info-title{
+    color: #464646;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .car-info-ul{
+    margin-top: 24px;
+    border: 2px solid #c4c4c4;
+    border-left: none;
+    border-right: none;
+    li{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 42px;
+      &:not(:last-of-type){
+        border-bottom: 1px solid #c4c4c4;
+      }
+      p{
+        color: #464646;
+        font-size: 17px;
+        &:last-of-type{
+          font-size: 20px;
+        }
+      }
+      
+    }
+  }
+
+
+  .price-area{
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 150px;
+    min-height: 150px;
+    .price-box{
+      border-radius: 22px;
+      padding: 0 20px;
+      padding-top: 10px;
+      padding-bottom: 2px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      //justify-content: ;
+      
+      .p-title{
+        width: 100%;
+        font-size: 30px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 4px;
+      }
+      .price-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        width: 100%;
+      }
+      .p-text{
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        font-size: 28px;
+        padding-top: 8px;
+      }
+      
+      .price-info-ul{
+        width: 100%;
+        padding: 0 12px;
+        li{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 5px;
+          &:first-of-type{
+            border-bottom: 1px solid #949494;
+          }
+
+          p{
+            line-height: 1.2; 
+          }
+
+          .name{
+            font-size: 25px;
+          }
+          .price{
+            font-size: 32px;
+            font-weight: 500;
+            .won{
+              font-size: 21px;
+              font-weight: 400;
+              margin-left: 3px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  .price-info{
+    width: 308px;
+    background-color: #ffe866;
+  }
+  .price-lease{
+    width: 182px;
+    background-color: #ffc775;
+  }
+
+
+  .btn-car-quote{
+    margin-top: 14px;
+    width: 100%;
+    height: 72px;
+    border-radius: 36px;
+    background: linear-gradient(125deg,#a74cb8 40%,#7a3dc8 52%);
+    color: #fff;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    //box-shadow: 2px 0 ;
+  }
+
+  .tip-box{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: left;
+    p{
+      line-height: 1.4;
+    }
+  }
+}
+
+
+
+
+
