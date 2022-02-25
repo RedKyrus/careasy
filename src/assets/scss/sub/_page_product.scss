@@ -19,7 +19,19 @@
   padding: 0 52px;
   padding-top: 34px;
   padding-bottom: 34px;
-  
+}
+
+.product-img-main{
+  background-color: #23262a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .img-box{
+    width: 80%;
+    img{
+      width: 100%; 
+    }
+  }
 }
 
 
@@ -60,8 +72,7 @@
       
     }
   }
-
-
+  
   .price-area{
     margin-top: 26px;
     display: flex;
@@ -69,6 +80,10 @@
     align-items: stretch;
     height: 150px;
     min-height: 150px;
+
+    
+
+
     .price-box{
       border-radius: 22px;
       padding: 0 20px;
@@ -170,6 +185,23 @@
 }
 
 
+@media (max-width:$mobileBaseMaxSize){
+  .page-sub-product{
+    //background-color: #323232; 
+    .product-sect-cont{
+      
+    }
+    .sect-container{
+      width: auto;
+    }
+  }
+  .product-area{
+    flex-direction: column;
+  }
 
+  .product-car-info-area{
+    width: 100%;
+  }
+}
 
 
