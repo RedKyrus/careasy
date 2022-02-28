@@ -84,14 +84,15 @@
 
 
     .price-box{
+      width: 49%;
       border-radius: 22px;
       padding: 0 20px;
       padding-top: 10px;
-      padding-bottom: 2px;
+      padding-bottom: 14px;
       //height: 5;
       display: flex;
       flex-direction: column;
-      //justify-content: ;
+      box-shadow: 3px 0 4px rgba($color: #000, $alpha: 0.3);
       
       .p-title{
         width: 100%;
@@ -105,6 +106,7 @@
         align-items: center;
         flex-grow: 1;
         width: 100%;
+        padding-top: 14px;
       }
       .p-text{
         // display: flex;
@@ -113,54 +115,63 @@
         font-size: 28px;
         padding-top: 8px;
       }
-      
-      .price-info-ul{
-        width: 100%;
-        padding: 0 12px;
-        li{
-          width: 100%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-top: 5px;
-          &:first-of-type{
-            border-bottom: 1px solid #949494;
+      .p-price{
+        font-size: 32px;
+          font-weight: 500;
+          .won{
+            font-size: 21px;
+            font-weight: 400;
+            margin-left: 3px;
           }
-
-          p{
-            line-height: 1.2; 
-          }
-
-          .name{
-            font-size: 25px;
-          }
-          .price{
-            font-size: 32px;
-            font-weight: 500;
-            .won{
-              font-size: 21px;
-              font-weight: 400;
-              margin-left: 3px;
-            }
-          }
-
-        }
       }
+      
+      // .price-info-ul{
+      //   width: 100%;
+      //   padding: 0 12px;
+      //   li{
+      //     width: 100%;
+      //     display: flex;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //     padding-top: 5px;
+      //     &:first-of-type{
+      //       border-bottom: 1px solid #949494;
+      //     }
+
+      //     p{
+      //       line-height: 1.2; 
+      //     }
+
+      //     .name{
+      //       font-size: 25px;
+      //     }
+      //     .price{
+      //       font-size: 32px;
+      //       font-weight: 500;
+      //       .won{
+      //         font-size: 21px;
+      //         font-weight: 400;
+      //         margin-left: 3px;
+      //       }
+      //     }
+
+      //   }
+      // }
     }
   }
 
   .price-info{
-    width: 308px;
+    //width: 308px;
     background-color: #ffe866;
   }
   .price-lease{
-    width: 182px;
+    //width: 182px;
     background-color: #ffc775;
   }
 
 
   .btn-car-quote{
-    margin-top: 14px;
+    margin-top: 28px;
     width: 100%;
     height: 72px;
     border-radius: 36px;
@@ -227,24 +238,24 @@
       font-size: toRem(40);
     }
 
-    .car-info-ul{
-      margin-top: toRem(20);
-      li{
-        height: toRem(66);
-        padding: 0 toRem(20);
-        &:not(:last-of-type){
+    // .car-info-ul{
+    //   margin-top: toRem(20);
+    //   li{
+    //     height: toRem(66);
+    //     padding: 0 toRem(20);
+    //     &:not(:last-of-type){
           
-        }
-        p{
+    //     }
+    //     p{
           
-          font-size: toRem(25);
-          &:last-of-type{
-            font-size: toRem(27);
-          }
-        }
+    //       font-size: toRem(25);
+    //       &:last-of-type{
+    //         font-size: toRem(27);
+    //       }
+    //     }
         
-      }
-    }
+    //   }
+    // }
 
     .price-area{
       margin-top: toRem(24);
@@ -256,7 +267,7 @@
         border-radius: toRem(24);
         padding: 0 toRem(20);
         padding-top: toRem(18);
-        padding-bottom: toRem(10);
+        padding-bottom: toRem(16);
         
         
         .p-title{
@@ -264,11 +275,20 @@
           padding-bottom: toRem(6);
         }
         .price-cont{
-          padding-top: toRem(8);
+          padding-top: toRem(22);
         }
         .p-text{
           font-size: toRem(36);
           padding-top: toRem(8);
+        }
+
+        .p-price{
+          font-size: toRem(38);
+            font-weight: 500;
+            .won{
+              font-size: toRem(24);
+              margin-left: toRem(3);
+            }
         }
         
         .price-info-ul{
