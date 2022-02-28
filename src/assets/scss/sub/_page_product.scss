@@ -22,12 +22,13 @@
 }
 
 .product-img-main{
+  width: 490px;
   background-color: #23262a;
   display: flex;
   align-items: center;
   justify-content: center;
   .img-box{
-    width: 80%;
+    width: 100%;
     img{
       width: 100%; 
     }
@@ -205,6 +206,7 @@
   }
   
   .product-img-main{
+    width: 100%;
     background: none;
     .img-box{
       
@@ -218,7 +220,7 @@
 
   .product-car-info-area{
     width: 100%;
-    padding-top: toRem(80);
+    padding-top: toRem(70);
 
     .car-info-title{
       font-weight: 400;
