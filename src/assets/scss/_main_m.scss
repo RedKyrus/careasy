@@ -111,6 +111,74 @@
           margin-top: toRem(228);
         }
       }
+
+      .text-sty01{
+        &>p{
+          ;
+        }
+        .title-main{
+          font-size: toRem(58);
+          margin-top: toRem(30);
+        }
+        .title-sub{
+          font-size: toRem(33);
+          margin-top: 8px;
+        }
+        .txt-type{
+          background-color: rgba($color: #000000, $alpha: 0.7);
+          //width: 180px;
+          width: max-content;
+          color: #fff;
+          font-size: toRem(20);
+          
+          margin-top: toRem(12);
+          padding: 0 toRem(22);
+          padding-top: toRem(7);
+          padding-bottom: toRem(8);
+          border-radius: toRem(30);
+        }
+  
+        .txt{
+          font-size: toRem(20);
+          margin-top: toRem(208);
+        }
+  
+      }
+  
+      .text-sty02{
+        &>p{
+        }
+        .title-main{
+          font-size: toRem(58);
+          margin-top: toRem(30);
+        }
+        .title-sub{
+          font-size: toRem(30);
+          margin-top: toRem(8);
+        }
+        .txt-type{
+          background-color: rgba($color: #000000, $alpha: 0.7);
+          font-size: toRem(20);
+          font-weight: 400;
+          margin-top: toRem(12);
+          padding: 0 toRem(22);
+          padding-top: toRem(7);
+          padding-bottom: toRem(8);
+          border-radius: toRem(30);
+        }
+  
+        .txt{
+          font-size: toRem(20);
+          margin-top: toRem(260);
+          .span-purple{
+            color: #92118f;
+          }
+        }
+  
+      }
+
+
+      
     }
   }
 

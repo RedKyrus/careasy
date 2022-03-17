@@ -7,12 +7,23 @@
   margin: 0 auto;
   .sidebar-container{
     position: absolute;
-    top: 240px;
-    left: 600px;
-    width: 105px;
+    top: 134px;
+    left: 570px;
+    width: fit-content;
     // .sidebar-ul{
     //   //transform: translateY(-40%);
     // }
+  }
+
+  .sidebar-ul{
+    text-align: center;
+    li{
+      margin-bottom: 12px;
+      &:nth-of-type(1){
+        margin-bottom: 16px;
+      }
+
+    }
   }
 }
 
