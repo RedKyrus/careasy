@@ -48,27 +48,136 @@
         </div>
       </header>
       <main class="wrap-container page-order">
-        <p>주문내역</p>
-        <ul> 
-          <li> </li>
-        </ul>
-        <div> 
-          <p>배송정보</p>
-          <ul> 
-            <li>
-              <p>받으시는 분</p>
-              <input type="text">
-            </li>
-            <li> 
-              <p>주소</p>
-              <input type="text">
-            </li>
-            <li>
-              <p>이메일</p>
-              <input type="text">
-            </li>
-          </ul>
-        </div>
+        <section class="sect order-sect-cont">
+          <form class="order-area-wrap">
+            <div class="order-area-list">
+              <p class="order-title">주문내역</p>
+              <table class="order-area-list-table">
+                <tr>
+                  <th>
+                    <p>이미지 </p>
+                  </th>
+                  <th>
+                    <p>상품정보</p>
+                  </th>
+                  <th>
+                    <p>판매가 </p>
+                  </th>
+                  <th>
+                    <p>배송구분</p>
+                  </th>
+                  <th>
+                    <p>배송비</p>
+                  </th>
+                  <th class="sum">
+                    <p>합계 </p>
+                  </th>
+                </tr>
+                <tr> 
+                  <td>
+                    <div class="img-box"><img src="../img/car/car_relese01.png" alt="자동차이미지"></div>
+                  </td>
+                  <td>
+                    <p>베뉴</p>
+                  </td>
+                  <td>
+                    <p>2,000,000원</p>
+                  </td>
+                  <td>
+                    <p>기본배송         </p>
+                  </td>
+                  <td>
+                    <p>[무료]</p>
+                  </td>
+                  <td class="sum">
+                    <p>2,000,000원</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="order-area-info">
+              <p class="order-title">배송정보 </p>
+              <table class="order-area-info-table">
+                <tr>
+                  <td>
+                    <p>받으시는 분</p>
+                  </td>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>주소</p>
+                  </td>
+                  <td>
+                    <ul class="address-box">
+                      <li class="address-number">
+                        <input type="text">
+                        <button class="search-address" type="button">우편번호 검색</button>
+                      </li>
+                      <li class="address-base">
+                        <input type="text"><span>기본주소    </span>
+                      </li>
+                      <li class="address-add">
+                        <input type="text"><span>나머지 주소(선택입력 가능)</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>전화번호</p>
+                  </td>
+                  <td>
+                    <input type="text"><span>('-' 없이 입력)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>이메일</p>
+                  </td>
+                  <td>
+                    <input type="text">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>배송메시지</p>
+                  </td>
+                  <td>
+                    <textarea class="message-box"> </textarea>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="order-area-pay">
+              <p class="order-title">결제예정 금액</p>
+              <table class="order-pay-table">
+                <tr class="pay-select-tr"> 
+                  <td>
+                    <p>결재수단 선택</p>
+                  </td>
+                  <td class="pay-select">
+                    <div> 
+                      <input type="radio" checked="checked" id="pay-type01">
+                      <label for="pay-type01">신용카드</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="sum-tr"> 
+                  <td>
+                    <p>최종결제 금액</p>
+                  </td>
+                  <td class="sum">
+                    <p>2,000,000원</p>
+                  </td>
+                </tr>
+              </table>
+              <button class="btn-pay" type="button">결제하기</button>
+            </div>
+          </form>
+        </section>
       </main>
       <!--모달-견적신청-->
             <div class="modal-wrap modal-quote">

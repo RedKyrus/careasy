@@ -2,19 +2,71 @@ extends ../../template/layout_sub
 
 block content
   main(class="wrap-container page-order")
-    p 주문내역
-    ul 
-      li 
+    section(class="sect order-sect-cont")
+      form.order-area-wrap
+        div(class="order-area-list")
+          p.order-title 주문내역
+          table(class="order-area-list-table")
+            tr
+              th: p 이미지 
+              th: p 상품정보
+              th: p 판매가 
+              th: p 배송구분
+              th: p 배송비
+              th.sum: p 합계 
+            tr 
+              td
+                div.img-box: img(src=`${imgPath}/car/car_relese01.png`, alt="자동차이미지")
+              td: p 베뉴
+              td: p 2,000,000원
+              td: p 기본배송         
+              td: p [무료]
+              td.sum: p 2,000,000원
 
-    div 
-      p 배송정보
-      ul 
-        li
-          p 받으시는 분
-          input(type="text")
-        li 
-          p 주소
-          input(type="text")
-        li
-          p 이메일
-          input(type="text")
+        div(class="order-area-info")
+          p.order-title 배송정보 
+          table(class="order-area-info-table")
+            tr
+              td: p 받으시는 분
+              td
+                input(type="text") 
+            tr
+              td: p 주소
+              td
+                ul.address-box
+                  li.address-number
+                    input(type="text")
+                    button(type="button" class="search-address") 우편번호 검색
+                  li.address-base
+                    input(type="text")
+                    span 기본주소    
+                  li.address-add
+                    input(type="text")
+                    span 나머지 주소(선택입력 가능)
+            tr
+              td: p 전화번호
+              td
+                input(type="text")
+                span ('-' 없이 입력)
+            tr
+              td: p 이메일
+              td: input(type="text")
+            tr
+              td: p 배송메시지
+              td
+                textarea(class="message-box") 
+
+        div(class="order-area-pay")
+          p.order-title 결제예정 금액
+          table.order-pay-table
+            tr.pay-select-tr 
+              td: p 결재수단 선택
+              td.pay-select: div 
+                input(type="radio", checked="checked" id="pay-type01")
+                label(for="pay-type01") 신용카드
+            tr.sum-tr 
+              td: p 최종결제 금액
+              td.sum: p 2,000,000원
+          
+
+          button(type="button" class="btn-pay") 결제하기
