@@ -58,7 +58,8 @@ const routes = {
     },
     js: {
         watch: "src/assets/**/*.js",
-        src: ["src/assets/js/**/!(_)*.js","!src/assets/js/lib/*.js"],
+        // src: ["src/assets/js/**/!(_)*.js","!src/assets/js/lib/*.js"],
+        src: ["src/assets/js/**/!(_)*.js"],
         lib: "src/assets/js/?(lib)/**/*.js",
         dest: "build/static/js/"
     },
@@ -91,10 +92,10 @@ const scss = () =>
 
 const js = () =>
     gulp.src(routes.js.src)
-        // .pipe(bro({transform: [
-        //     babelify.configure({presets:['@babel/preset-env']}),
-        //     ['uglifyify',{global:true}]
-        // ]}))
+        .pipe(bro({transform: [
+            babelify.configure({presets:['@babel/preset-env']}),
+            ['uglifyify',{global:true}]
+        ]}))
         .pipe(gulp.dest(routes.js.dest))
         // .pipe(gulp.src(routes.js.lib))
         // .pipe(gulp.dest(routes.js.dest))
@@ -137,6 +138,7 @@ export const clean = () => del([routes.root.build]);
 //
 const prepare = gulp.series([clean, img]);
 const assets = gulp.series([pug, scss, js, jslib]);
+// const assets = gulp.series([pug, scss, js]);
 const live = gulp.parallel([bSyncInfo, watch]);
 
 

@@ -29,7 +29,14 @@ html(lang="ko")
 
     link(href= `${basePath}static/css/fonts/GmarketSans.css` rel="stylesheet")
     
-
+    //babel
+    //- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+    //- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    //- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    //- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.10.4/polyfill.min.js"></script>
+    //- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.16.0/polyfill.js"></script>
+    //- <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
     
 
     //base
@@ -42,9 +49,27 @@ html(lang="ko")
 
     //- //==plugin==
     //- //@swiperjs
-    link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+    //- link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
     //- //- script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
-    script(src=`${basePath}static/js/lib/swiper_bundle.min.7.4.1.js`)    
+    //- script(src=`${basePath}static/js/lib/swiper_bundle.min.7.4.1.js`)
+
+    //ie9 보다 높다면
+    <!--[if gt ie 9]><!--> 
+    //==plugin==
+    //@swiperjs
+    //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js")
+    <!--<![endif]-->
+
+    //ie가 아니라면
+    <!--[if !ie]>--> 
+    //==plugin==
+    //@swiperjs
+    link(rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+    //- script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+    script(src=`${basePath}static/js/lib/swiper_bundle.min.7.4.1.js`)
+    <!-- <![endif]-->
+    
 
     title 장기렌트카 카이지
   
