@@ -1,11 +1,14 @@
 extends ../../template/layout_sub
 
-mixin reivewArea(name, rankNum, reviewTitle, reviewText, reviewImgPath)
+mixin reivewArea(reviewImgPath, name, rankNum, reviewTitle,  ...reviewText)
   -let star="";
   li.review-area
     div(class="img-area fn-open-modal-review"): img(src=`${imgPath}${reviewImgPath}`, alt="이미지")
     p.review-title #{reviewTitle}
-    p.review-text  #{reviewText}
+    p.review-text
+      each item in reviewText
+        | #{item}
+        br
     div.rank-area
       .icon-people: img(src=`${imgPath}/common/icon_people.png`, alt="이미지")
       p.name #{name} 고객님
@@ -23,9 +26,17 @@ block content
     section(class="sect sect-review review-sect-main")
       div(class="sect-container")
         ul(class="review-ul")
-          +reivewArea("김*진",5,"제네시스G80 출고후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나 ",  "/review/review01.png")
-          +reivewArea("정*민",5,"테슬라 모델3 출고후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...",  "/review/review02.png")
-          +reivewArea("이*훈",5,"스타리아 출고후기","고민끝에 결정한 현대 스타리아. 다른 차와 무척 고민을 많이 하고 귀찮게 해드렸는데",  "/review/review03.png")
+          +reivewArea("/review/review01.png","김*진",5,"제네시스G80 출고후기",
+            "차량렌탈은 처음인데 신차장 다이렉트로 빠르고 쉽게 전자계약하고 일주일만에 신차 받았습니다. 계약 담당 매니저님, 계약확인 전화, 탁송 기사님 모두 친절하셔서 모든 과정이 다 만족스러웠습니다",
+            ".다만 아쉬운 점 하나는 차량 앞유리 썬팅이 습한 날씨로 인해 우글거림과 오염 자국같은 게 있어서 좀 더 지켜본 다음에 이 부분만 a/s 받고자 합니다. 이것도 주의깊게 보지 않았으면 몰랐을텐데 탁송기사님께서 발견하시고 접수 방법도 상세하게 안내해주셔서 참 좋았습니다. 썬팅 문제로 문의했을 때 전화 상담도 친절했고, a/s 에서 걸려온 전화도 정말 친절하고 좋았습니다.")
+
+          +reivewArea("/review/review02.png","김*진",5,"스타리아 출고후기",
+            "차량렌탈은 처음인데 신차장 다이렉트로 빠르고 쉽게 전자계약하고 일주일만에 신차 받았습니다. 계약 담당 매니저님, 계약확인 전화, 탁송 기사님 모두 친절하셔서 모든 과정이 다 만족스러웠습니다",
+            ".다만 아쉬운 점 하나는 차량 앞유리 썬팅이 습한 날씨로 인해 우글거림과 오염 자국같은 게 있어서 좀 더 지켜본 다음에 이 부분만 a/s 받고자 합니다. 이것도 주의깊게 보지 않았으면 몰랐을텐데 탁송기사님께서 발견하시고 접수 방법도 상세하게 안내해주셔서 참 좋았습니다. 썬팅 문제로 문의했을 때 전화 상담도 친절했고, a/s 에서 걸려온 전화도 정말 친절하고 좋았습니다.")
+
+
+          +reivewArea("/review/review03.png", "정*민",5,"테슬라 모델3 출고후기","신차를 할부로 하는것보다는 장기렌트로 하는편이 훨씬 나은거 같아서...")
+          +reivewArea("/review/review04.png", "이*훈",5,"스타리아 출고후기","고민끝에 결정한 현대 스타리아. 다른 차와 무척 고민을 많이 하고 귀찮게 해드렸는데",  "/review/review03.png")
           //+reivewArea("강*석",5,"BMW X3 출고 후기","왠만하면 후기 잘 안남기는데 이사님이 너무 잘 해주셔서 남깁니다. 일이 늦게끝나  ",  "/review/review04.png")
 
 
@@ -44,3 +55,5 @@ block content
             img(src=`${imgPath}/common/paging_arrow_left.png`, alt="다음 페이지")
           button(type="button" class="paging-btn paging-btn-last")
             img(src=`${imgPath}/common/paging_arrow_left_duble.png`, alt="끝 페이지")
+
+

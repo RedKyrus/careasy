@@ -23,6 +23,8 @@ window.addEventListener('DOMContentLoaded', () =>{
 
   topAdCloseEvent();
 
+  modalGetReview();
+
 }
 );
 
@@ -118,3 +120,33 @@ let scrollMoveAction = (target) =>{
   let pos = target.offsetTop - 20;
   window.scrollTo({top:pos, behavior:'smooth'});
 }
+
+let modalGetReview = () =>{
+  const btnShowList = document.querySelectorAll('.fn-open-modal-review');
+  const reviewModalTitle = document.querySelector('.modal-review .review-title');
+  const reviewModalText = document.querySelector('.modal-review .review-text');
+  const reviewModalImg = document.querySelector('.modal-review .img-area');
+  const reviewModalName = document.querySelector('.modal-review .rank-area .name');
+
+  for(const btn of btnShowList){
+    btn.addEventListener("click", setInfo);
+  };
+
+  function setInfo(e){
+
+    console.log(e.target)
+    let reviewArea = e.target.parentNode;
+    console.log(reviewArea);
+    let getReviewTitle = reviewArea.querySelector(".review-title");
+    let getReviewText = reviewArea.querySelector(".review-text");
+    let getReviewImg = reviewArea.querySelector(".img-area");
+    let getReviewName = reviewArea.querySelector(".rank-area .name");
+
+    reviewModalTitle.innerHTML = getReviewTitle.innerHTML;
+    reviewModalText.innerHTML = getReviewText.innerHTML;
+    reviewModalImg.innerHTML = getReviewImg.innerHTML;
+    reviewModalName.innerHTML = getReviewName.innerHTML;
+  }
+  //reviewModal.
+
+};
