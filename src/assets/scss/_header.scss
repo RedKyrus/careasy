@@ -2,19 +2,33 @@
   width: 100%;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
   position: relative;
+  background-color: #110a3e;
   .header-bg{
     z-index: -1;
     width: 100%;
     position: absolute;
     top: 0;
-    background: linear-gradient(142deg, #700BBF 0%, #8E1096 45%, #92118F 100%);
+    // background: linear-gradient(142deg, #700BBF 0%, #8E1096 45%, #92118F 100%);
+    background: linear-gradient(142deg, #0eaad7 0%, #1c45a9 45%, #231192 100%);
     // height: 760px;
     height: 100%;
   }
   .header-bg-main-h{
     height: 760px;
+  }
+
+  .header-top{
+    
+    border-bottom: 1px solid #88859f;
+    padding-bottom: 24px;
+    .top-content{
+      width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
   }
 
   .header-container{
@@ -23,10 +37,184 @@
     align-items: flex-start;
     margin: 0 auto;
     width: 1080px;
-    padding-left: 76px;
-    padding-right: 22px;
+    padding-top: 21px;
   }
 
+}
+
+$searchBorderR: 40px;
+
+.search-area{
+  padding-right: 70px;
+  position: relative;
+  margin: 0 auto;
+  *{
+    color: #fff;
+    letter-spacing: -1.2;
+    
+  }
+  .search-bar{
+    width: 500px;
+    overflow: hidden;
+    display: flex;
+    height: 42px;
+    justify-content: space-between;
+  }
+  .search-cont{
+    border: 2px solid #feff84;
+    border-radius: $searchBorderR 0 0 $searchBorderR;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .bar-rank{
+    width: 242px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    position: relative;
+    cursor: pointer;
+    p{
+      font-weight: 500;
+    }
+    .rank-one{
+      margin-left: 22px;
+      // width: 138px;
+      flex-grow: 1;
+      text-align: left;
+    }
+    &::after{
+      content: "";
+      background-color: #fff;
+      width: 1px;
+      height: 22px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+  }
+
+  .in-search{
+    font-size: 16px;
+    background-color: #110a3e;
+    padding-left: 15px;
+    // width: 200px;
+    &::placeholder{
+      color: #fff;
+      font-size: 15px;
+    }
+  }   
+  .btn-search{
+    // transform: translateX(2px);
+    width: 52px;
+    background-color: #feff84;
+    border-radius: 0 $searchBorderR $searchBorderR 0;
+  }
+
+  //랭크 쪽
+  .search-rank{
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    display: none;
+    &.rank-show{
+      display: block;
+    }
+
+    .rank-box{
+      // position: relative;
+      // z-index: 1;
+      *{
+        text-align: left;
+        font-weight: 600;
+      }
+      background-color: #fff;
+      border: 2px solid #feff84;
+      border-radius: 8px;
+      width: 185px;
+      padding-top: 12px;
+      padding-left: 14px;
+      padding-bottom: 20px;
+
+      .icon-triangle{
+        width: 50px;
+        height: 18px;
+        overflow: hidden;
+        position: absolute;
+        top: -16px;
+        left: 2px;
+        transform: scaleX(0.7);
+        &::after{
+          content: "";
+          width: 50px;
+          height: 50px;
+          border: 2px solid #feff84;
+          background-color: #fff;
+          transform: rotateZ(45deg);
+          position: absolute;
+          top: 14px;
+          left: 0;
+        }
+      }
+
+      .btn-close-rank{
+        position: absolute;
+        top: 15px;
+        right: 8px;
+        padding: 6px;
+        width: 22px;
+        height: 0;
+        &::after,&::before{
+          content: "";
+          // background-color: #110a3e;
+          background-color: #6b5f5f;
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 3px;
+        }
+        &::after{
+          transform: rotate(45deg);
+        }
+        &::before{
+          transform: rotate(-45deg);
+        }
+      }
+
+
+      .top-ment{
+        color: #110a3e;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: #c0e8ff;
+        width: fit-content;
+        padding-top: 5px;
+        padding-bottom: 7px;
+        padding-left: 8px;
+        padding-right: 14px;
+        border-radius: 10px;
+      }
+      .rank-ul{
+        li{
+          color: #110a3e;
+          font-size: 15px;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+.top-logo{
+  // padding-top: 4px;
+  &>img{
+    display: block;
+  }
 }
 
 .header-logo{
@@ -46,13 +234,13 @@
     align-items: center;
     &>li{
       position: relative;
-      padding:0 35px;
+      padding:0 60px;
       &::after{
         position: absolute;
         content: "";
         background-color: #e1e1e1;
         width: 1px;
-        height: 12px;
+        height: 16px;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
@@ -62,11 +250,14 @@
       &:last-of-type::after{
         content: none;
       }
+      &:first-of-type{
+        padding-left: 0;
+      }
 
       a{
         color: #fff;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 22px;
+        // font-weight: 400;
       }
     }
   }
@@ -91,11 +282,74 @@
     .header-bg-main-h{
       height: toRem(2000);
     }
+    .header-top{
+      .top-content{
+        width: 100%;
+        padding: 0 toRem(38);
+        padding-top: toRem(30);
+      }
+    }
     
     .header-container{
       width: 100%;
       display: block;
       padding: 0;
+    }
+  }
+
+  $searchBorderR: toRem(30);
+  
+
+  .search-area{
+    padding-right: 0;
+    width: 60%;
+    .search-bar{
+      width: auto;
+      height: toRem(56);
+    }
+    .search-cont{
+      border: 3px solid #feff84;
+      border-radius: $searchBorderR 0 0 $searchBorderR;
+      flex-grow: 1;
+    }
+  
+    .bar-rank{
+      display: none;
+    }
+  
+    .in-search{
+      font-size: toRem(20);      
+      padding-left: toRem(18);
+      // width: 200px;
+      
+      &::placeholder{
+        font-size: toRem(20);
+      }
+    }   
+    .btn-search{
+      // transform: translateX(2px);
+      margin-left: -1px;
+      width: toRem(58);
+      background-color: #feff84;
+      border-radius: 0 $searchBorderR $searchBorderR 0;
+    }
+  
+    //랭크 쪽
+    .search-rank{
+      &.rank-show{
+        display: none;
+      }
+
+    }
+  }
+
+  .top-logo{
+    // padding-top: toRem(24);
+    // padding-bottom: toRem(30);
+    // background-color: #fff;
+    img{
+      //display: block;
+      width: toRem(140);
     }
   }
 
@@ -130,3 +384,7 @@
     display: none;
   }
 }
+
+
+
+

@@ -1,4 +1,173 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";function _createForOfIteratorHelper(e,t){var o="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(!o){if(Array.isArray(e)||(o=_unsupportedIterableToArray(e))||t&&e&&"number"==typeof e.length){o&&(e=o);var r=0,n=function(){};return{s:n,n:function(){return r>=e.length?{done:!0}:{done:!1,value:e[r++]}},e:function(e){throw e},f:n}}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}var a,l=!0,c=!1;return{s:function(){o=o.call(e)},n:function(){var e=o.next();return l=e.done,e},e:function(e){c=!0,a=e},f:function(){try{l||null==o.return||o.return()}finally{if(c)throw a}}}}function _unsupportedIterableToArray(e,t){if(e){if("string"==typeof e)return _arrayLikeToArray(e,t);var o=Object.prototype.toString.call(e).slice(8,-1);return"Object"===o&&e.constructor&&(o=e.constructor.name),"Map"===o||"Set"===o?Array.from(e):"Arguments"===o||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(o)?_arrayLikeToArray(e,t):void 0}}function _arrayLikeToArray(e,t){(null==t||t>e.length)&&(t=e.length);for(var o=0,r=new Array(t);o<t;o++)r[o]=e[o];return r}"NodeList"in window&&!NodeList.prototype.forEach&&(console.info("polyfill for IE11"),NodeList.prototype.forEach=function(e,t){t=t||window;for(var o=0;o<this.length;o++)e.call(t,this[o],o,this)}),window.addEventListener("DOMContentLoaded",function(){modalOpenEvent("agree"),modalOpenEvent("quote"),modalOpenEvent("complete"),modalOpenEvent("branch"),modalOpenEvent("review"),modalCloseEvent(),topAdCloseEvent(),modalGetReview()}),window.addEventListener("load",function(){scrollMoveEvent()});var modalOpenEvent=function(e){var t=document.querySelectorAll(".fn-open-modal-".concat(e)),o=document.querySelector(".modal-".concat(e)),r=function(){o.classList.add("modal-show"),document.body.classList.add("modal-open-scroll-stop")};t.forEach(function(e){e.addEventListener("click",r)})},modalCloseEvent=function(){document.querySelectorAll(".fn-close-modal").forEach(function(e){var t=e.closest(".modal-wrap");e.addEventListener("click",function(){t.classList.remove("modal-show"),null==document.querySelector(".modal-show")&&document.body.classList.remove("modal-open-scroll-stop")})})},topAdCloseEvent=function(){var e=document.querySelector(".top-ad");document.querySelector(".top-ad .btn-close-ad").addEventListener("click",function(){e.classList.add("ad-hidden")})},scrollMoveEvent=function(){var e=localStorage.getItem("scrollMoveTargetID");if(null!=e){var t=document.querySelector("[data-scroll-id='".concat(e,"']"));scrollMoveAction(t),localStorage.removeItem("scrollMoveTargetID")}document.querySelectorAll("[data-scroll-target]").forEach(function(e){var t=e.getAttribute("data-scroll-target");e.addEventListener("click",function(e){var o=document.querySelector("[data-scroll-id='".concat(t,"']"));null!==o?(e.preventDefault(),scrollMoveAction(o)):localStorage.setItem("scrollMoveTargetID",t)})})},scrollMoveAction=function(e){var t=e.offsetTop-20;window.scrollTo({top:t,behavior:"smooth"})},modalGetReview=function(){var e,t=document.querySelectorAll(".fn-open-modal-review"),o=document.querySelector(".modal-review .review-title"),r=document.querySelector(".modal-review .review-text"),n=document.querySelector(".modal-review .img-area"),a=document.querySelector(".modal-review .rank-area .name"),l=_createForOfIteratorHelper(t);try{for(l.s();!(e=l.n()).done;){e.value.addEventListener("click",c)}}catch(e){l.e(e)}finally{l.f()}function c(e){console.log(e.target);var t=e.target.parentNode;console.log(t);var l=t.querySelector(".review-title"),c=t.querySelector(".review-text"),i=t.querySelector(".img-area"),d=t.querySelector(".rank-area .name");o.innerHTML=l.innerHTML,r.innerHTML=c.innerHTML,n.innerHTML=i.innerHTML,a.innerHTML=d.innerHTML}};
+//i===== ie 11
+if ('NodeList' in window && !NodeList.prototype.forEach) {
+  console.info('polyfill for IE11');
+  NodeList.prototype.forEach = function (callback, thisArg) {
+    thisArg = thisArg || window;
+    for (var i = 0; i < this.length; i++) {
+      callback.call(thisArg, this[i], i, this);
+    }
+  };
+}
+//=======
 
-},{}]},{},[1]);
+
+window.addEventListener('DOMContentLoaded', () =>{
+
+  modalOpenEvent("agree");
+  modalOpenEvent("quote");
+  modalOpenEvent("complete");
+  modalOpenEvent("branch");
+  modalOpenEvent("review");
+
+  modalCloseEvent();
+
+  topAdCloseEvent();
+
+  modalGetReview();
+
+  //랭크
+  rankBoxEvent();
+
+}
+);
+
+window.addEventListener('load',()=>{
+  scrollMoveEvent();
+});
+
+
+
+let modalOpenEvent = (modalname) =>{
+  let btnOpenList = document.querySelectorAll(`.fn-open-modal-${modalname}`);
+  let tagetModal = document.querySelector(`.modal-${modalname}`);
+  
+  let openModal= () =>{
+    tagetModal.classList.add("modal-show");
+    document.body.classList.add("modal-open-scroll-stop")
+    //console.log(modalname, "작동");
+  }
+
+  btnOpenList.forEach(btn =>{
+    btn.addEventListener("click", openModal);
+  });
+
+}
+
+let modalCloseEvent =() =>{
+  let btnCloseList = document.querySelectorAll(".fn-close-modal");
+  //btnClose.closest(".modal-wrap");
+  
+  btnCloseList.forEach(btn =>{
+    let tagetModal = btn.closest(".modal-wrap");
+    btn.addEventListener("click", ()=>{
+      tagetModal.classList.remove("modal-show");
+      let isShowModal = document.querySelector(".modal-show");
+      if(isShowModal == null){
+        document.body.classList.remove("modal-open-scroll-stop")
+      }
+      
+    });
+  });
+  
+}
+
+let topAdCloseEvent =() =>{
+  let topAd = document.querySelector(".top-ad");
+  let btnCloseAd = document.querySelector(".top-ad .btn-close-ad");
+  //btnClose.closest(".modal-wrap");
+  
+  let closeTopAd = () =>{
+    topAd.classList.add("ad-hidden");
+  }
+
+  btnCloseAd.addEventListener("click",closeTopAd)
+  
+}
+
+let scrollMoveEvent = () =>{
+
+  let storageKeyName ="scrollMoveTargetID";
+  
+  let getTargetID = localStorage.getItem(storageKeyName);
+  // /console.log(getTargetID);
+  
+  if(getTargetID != null){
+    let getTarget = document.querySelector(`[data-scroll-id='${getTargetID}']`);
+    scrollMoveAction(getTarget);
+    //console.log(getTarget);
+    localStorage.removeItem(storageKeyName);
+  }
+
+  let btnTrigger = document.querySelectorAll("[data-scroll-target]");
+
+  btnTrigger.forEach(btn=>{
+    let targetID = btn.getAttribute("data-scroll-target");
+
+    btn.addEventListener("click",(event)=>{
+      
+      let target = document.querySelector(`[data-scroll-id='${targetID}']`);
+      if(target === null){
+        localStorage.setItem(storageKeyName, targetID);
+        return;
+      }
+
+      event.preventDefault();
+      scrollMoveAction(target);
+    });
+
+  });
+
+}
+
+let scrollMoveAction = (target) =>{
+  let pos = target.offsetTop - 20;
+  window.scrollTo({top:pos, behavior:'smooth'});
+}
+
+let modalGetReview = () =>{
+  const btnShowList = document.querySelectorAll('.fn-open-modal-review');
+  const reviewModalTitle = document.querySelector('.modal-review .review-title');
+  const reviewModalText = document.querySelector('.modal-review .review-text');
+  const reviewModalImg = document.querySelector('.modal-review .img-area');
+  const reviewModalName = document.querySelector('.modal-review .rank-area .name');
+
+  for(const btn of btnShowList){
+    btn.addEventListener("click", setInfo);
+  };
+
+  function setInfo(e){
+
+    console.log(e.target)
+    let reviewArea = e.target.parentNode;
+    console.log(reviewArea);
+    let getReviewTitle = reviewArea.querySelector(".review-title");
+    let getReviewText = reviewArea.querySelector(".review-text");
+    let getReviewImg = reviewArea.querySelector(".img-area");
+    let getReviewName = reviewArea.querySelector(".rank-area .name");
+
+    reviewModalTitle.innerHTML = getReviewTitle.innerHTML;
+    reviewModalText.innerHTML = getReviewText.innerHTML;
+    reviewModalImg.innerHTML = getReviewImg.innerHTML;
+    reviewModalName.innerHTML = getReviewName.innerHTML;
+  }
+  //reviewModal.
+
+};
+
+//랭크박스 오픈
+
+let rankBoxEvent = () =>{
+  const btnOpen = document.querySelector(".fn-open-rankbox");
+  const rankBox = document.querySelector(".open-rank-target");
+  const btnClose = document.querySelector(".open-rank-target .btn-close-rank");
+
+  btnOpen.addEventListener("click",openBox);
+  btnClose.addEventListener("click",closeBox);
+
+  function openBox(){
+    rankBox.classList.add("rank-show");
+  }
+  function closeBox(){
+    rankBox.classList.remove("rank-show");
+  }
+}

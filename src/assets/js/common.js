@@ -25,6 +25,9 @@ window.addEventListener('DOMContentLoaded', () =>{
 
   modalGetReview();
 
+  //랭크
+  rankBoxEvent();
+
 }
 );
 
@@ -150,3 +153,21 @@ let modalGetReview = () =>{
   //reviewModal.
 
 };
+
+//랭크박스 오픈
+
+let rankBoxEvent = () =>{
+  const btnOpen = document.querySelector(".fn-open-rankbox");
+  const rankBox = document.querySelector(".open-rank-target");
+  const btnClose = document.querySelector(".open-rank-target .btn-close-rank");
+
+  btnOpen.addEventListener("click",openBox);
+  btnClose.addEventListener("click",closeBox);
+
+  function openBox(){
+    rankBox.classList.add("rank-show");
+  }
+  function closeBox(){
+    rankBox.classList.remove("rank-show");
+  }
+}

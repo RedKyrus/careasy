@@ -1,6 +1,6 @@
 let onready = () =>{
 
-  mainHeaderBgControll();
+  // mainHeaderBgControll();
 
 
 

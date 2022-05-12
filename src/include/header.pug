@@ -1,10 +1,43 @@
 header.header 
-  div.header-bg
+  //- div.header-bg
+
+  div.header-top
+    div.top-content
+      div.top-logo
+        a(href=`${basePath}index.html`)
+          img(src=`${imgPath}/common/logo_top.png`, alt="탑로고")
+
+      div.search-area
+        div.search-bar
+          div.search-cont
+            div(class="bar-rank fn-open-rankbox")
+              p.p-txt 인기검색
+              p.rank-one 1. 카니발
+            input(class="in-search" type="text" placeholder="차종을 입력하세요")
+          button(class="btn-search" type="button") 
+            img(src=`${imgPath}/common/icon_search.png`, alt="검색버튼")
+          
+        div(class="search-rank open-rank-target")
+          div.rank-box
+            div.icon-triangle
+            button(class="btn-close-rank" type="button") 
+            p.top-ment 인기검색
+            ul.rank-ul
+              li 1. 카니발
+              li 2. GV80
+              li 3. G80
+              li 4. 그랜저
+              li 5. 테슬러
+
+
+  
   div.header-container
-    div.header-logo
-      a(href=`${basePath}index.html`)
-       img(src=`${imgPath}/common/logo_top.png`, alt="탑로고" class="mobile-hidden")
-       img(src=`${imgPath}/common/logo_top_color.png`, alt="탑로고 모바일" class="pc-hidden")
+    //- img(src=`${imgPath}/common/logo_top_color.png`, alt="탑로고 모바일" class="pc-hidden")
+    
+    //- div.header-logo
+    //-   a(href=`${basePath}index.html`)
+    //-    img(src=`${imgPath}/common/logo_top.png`, alt="탑로고" class="mobile-hidden")
+    //-    img(src=`${imgPath}/common/logo_top_color.png`, alt="탑로고 모바일" class="pc-hidden")
 
     nav.top-menu-content
       ul.top-menu-ul

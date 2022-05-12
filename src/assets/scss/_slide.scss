@@ -26,7 +26,6 @@
     img{
       //filter: invert(98%) sepia(14%) saturate(7372%) hue-rotate(171deg) brightness(87%) contrast(91%);
       filter: invert(81%) sepia(49%) saturate(5162%) hue-rotate(216deg) brightness(90%) contrast(82%);
-      
     }
     
   }
@@ -133,7 +132,8 @@
   .slide-btn{
     img{
       //filter: invert(98%) sepia(14%) saturate(7372%) hue-rotate(171deg) brightness(87%) contrast(91%);
-      filter: invert(81%) sepia(49%) saturate(5162%) hue-rotate(216deg) brightness(90%) contrast(82%);
+      // filter: invert(81%) sepia(49%) saturate(5162%) hue-rotate(216deg) brightness(90%) contrast(82%);
+      filter: invert(53%) sepia(28%) saturate(5816%) hue-rotate(221deg) brightness(94%) contrast(86%);
     }
   }
 
@@ -152,7 +152,7 @@
     border:1px solid #b18bd1;
     .car-top{
       .car-num{
-        color: #c28ac1;
+        color: #9183e8;
       }
       .car-deposit{
         color: #4c4c4c;
@@ -168,15 +168,15 @@
         }
       }
       .p-price{
-        color: #6e2aa8;
+        color: #533ed2;
       }
     }
   }
 
   
   .btn-quote{
-    color: #49276e;
-    background-color: #dac9ed;
+    color: #272b6e;
+    background-color: #daeffb;
   }
 }
 
