@@ -286,7 +286,7 @@ $searchBorderR: 40px;
       .top-content{
         width: 100%;
         padding: 0 toRem(38);
-        padding-top: toRem(30);
+        padding-top: toRem(38);
       }
     }
     
@@ -302,10 +302,10 @@ $searchBorderR: 40px;
 
   .search-area{
     padding-right: 0;
-    width: 60%;
+    width: 66%;
     .search-bar{
       width: auto;
-      height: toRem(56);
+      height: toRem(80);
     }
     .search-cont{
       border: 3px solid #feff84;
@@ -318,18 +318,18 @@ $searchBorderR: 40px;
     }
   
     .in-search{
-      font-size: toRem(20);      
+      font-size: toRem(28);      
       padding-left: toRem(18);
       // width: 200px;
-      
+      flex-grow: 1;
       &::placeholder{
-        font-size: toRem(20);
+        font-size: toRem(24);
       }
     }   
     .btn-search{
       // transform: translateX(2px);
       margin-left: -1px;
-      width: toRem(58);
+      width: toRem(80);
       background-color: #feff84;
       border-radius: 0 $searchBorderR $searchBorderR 0;
     }
