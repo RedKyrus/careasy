@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("complete");
   modalOpenEvent("branch");
   modalOpenEvent("review");
+  modalOpenEvent("terms");
 
   modalCloseEvent();
 

@@ -104,12 +104,22 @@ $searchBorderR: 40px;
       color: #fff;
       font-size: 15px;
     }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 1000px white inset;
+      box-shadow: 0 0 0 1000px white inset;
+    }
   }   
   .btn-search{
     // transform: translateX(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 52px;
     background-color: #feff84;
     border-radius: 0 $searchBorderR $searchBorderR 0;
+    img{
+      width: fit-content;
+    }
   }
 
   //랭크 쪽
@@ -332,6 +342,10 @@ $searchBorderR: 40px;
       width: toRem(80);
       background-color: #feff84;
       border-radius: 0 $searchBorderR $searchBorderR 0;
+
+      img{
+        width: 54%;
+      }
     }
   
     //랭크 쪽

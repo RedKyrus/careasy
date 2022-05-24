@@ -31,9 +31,9 @@
   }
 }
 
-.modal-agree{
+.modal-agree, .modal-terms{
   z-index: 32;
-  .modal-agree-cont{
+  .modal-agree-cont, .modal-terms-cont{
     
     background-color: #fff;
     max-width: 600px;
@@ -42,10 +42,31 @@
     //margin: 0 auto;
     border-radius: 20px;
     .agree-textarea-wrap{
+      // overflow-y: auto;
+      // overflow-x: hidden;
+      // height: 80%;
+      padding-top: 40px;
+    }
+    .textarea-cont{
+      // height: 90%;
       overflow-y: auto;
       overflow-x: hidden;
-      height: 80%;
-      padding-top: 40px;
+      height: 320px;
+      &::-webkit-scrollbar{
+        width: 12px;
+        
+      }
+      &::-webkit-scrollbar-thumb{
+        border-radius: 6px;
+        background-color: #4e39d1;
+        background-clip: padding-box;
+        border: 2px solid transparent;
+        // padding: 2px;
+      }
+      &::-webkit-scrollbar-track{
+        border-radius: 4px;
+        background-color: #f3f1ff;
+      }
     }
     .agree-textarea-pre{
       display: block;
@@ -53,10 +74,11 @@
       outline: none;
       margin: 0 auto;
       width: 90%;
-      height: 300px;
+      // height: 300px;
       white-space: pre-wrap;
       line-height: 1.2;
       color: #666;
+      padding-bottom: 30px;
       span{
         line-height: 1.2;
       }
@@ -79,9 +101,10 @@
       width: 50%;
       display: block;
       margin: 0 auto;
+      margin-top: 20px;
       height: 54px;
       border-radius: 60px;
-      background-color: #8930ac;
+      background-color: #4e39d1;
       color: #fff;
       font-size: 26px;
     }
@@ -426,16 +449,37 @@
 
 
 @media (max-width:$mobileBaseMaxSize) {
-  .modal-agree{
-    .modal-agree-cont{
+  .modal-agree, .modal-terms{
+    .modal-agree-cont,.modal-terms-cont{
       width: 86%;
       height: 88vw;
       //margin: 0 auto;
       border-radius: toRem(20);
       .agree-textarea-wrap{
-        height: 78%;
+        // height: 78%;
+        height: 100%;
         padding-top: toRem(40);
       }
+      .textarea-cont{
+        // width: 100%;
+        height: 76%;
+        // height: 100px;
+        &::-webkit-scrollbar{
+          // width: initial;
+        }
+        &::-webkit-scrollbar-thumb{
+          // border-radius: initial;
+          // background-color: initial ;
+          
+        }
+        &::-webkit-scrollbar-track{
+          // border-radius: initial ;
+          // background-color: initial ;
+          width: 60px;
+        }
+      }
+
+      
       .agree-textarea-pre{
         width: 90%;
         height: 100%;

@@ -4,6 +4,12 @@ mixin snsicon(altName, imgPath, ahref="#none")
 
 
 footer.footer 
+  div.footer-menu
+    ul.footer-menu-ul
+      li
+        button(class="fn-open-modal-terms" type="button") 이용약관
+      li
+        button(class="fn-open-modal-agree" type="button") 개인정보 취급방침
   div.footer-logo
       img(src=`${imgPath}/common/logo_footer.png`, alt="로고")
   div.footer-info  
@@ -18,5 +24,6 @@ footer.footer
         +snsicon("블로그",`${imgPath}/common/icon_circle_blog.png`)
         +snsicon("유뷰브",`${imgPath}/common/icon_circle_youtube.png`)
         +snsicon("인스타그램",`${imgPath}/common/icon_circle_instagram.png`)
+        
         
         
