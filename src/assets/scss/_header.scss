@@ -1,3 +1,5 @@
+
+
 .header{
   width: 100%;
   text-align: center;
@@ -293,10 +295,12 @@ $searchBorderR: 40px;
       height: toRem(2000);
     }
     .header-top{
+      padding-bottom: toRem(30);
       .top-content{
         width: 100%;
         padding: 0 toRem(38);
         padding-top: toRem(38);
+        justify-content: space-between;
       }
     }
     
@@ -307,12 +311,13 @@ $searchBorderR: 40px;
     }
   }
 
-  $searchBorderR: toRem(30);
+  $searchBorderR: toRem(40);
   
 
   .search-area{
+    margin: 0;
     padding-right: 0;
-    width: 66%;
+    width: 67%;
     .search-bar{
       width: auto;
       height: toRem(80);
@@ -333,7 +338,7 @@ $searchBorderR: 40px;
       // width: 200px;
       flex-grow: 1;
       &::placeholder{
-        font-size: toRem(24);
+        font-size: toRem(27);
       }
     }   
     .btn-search{
@@ -363,7 +368,7 @@ $searchBorderR: 40px;
     // background-color: #fff;
     img{
       //display: block;
-      width: toRem(140);
+      width: toRem(160);
     }
   }
 

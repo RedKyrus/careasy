@@ -19,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("branch");
   modalOpenEvent("review");
   modalOpenEvent("terms");
+  modalOpenEvent("pop-sunting");
+
+  topBannerSetting();
 
   modalCloseEvent();
 
@@ -53,6 +56,22 @@ let modalOpenEvent = (modalname) =>{
   });
 
 }
+
+
+let topBannerSetting = () =>{
+  let topBanner = document.querySelector(`.outer-top-banner`);
+  let closeTopBanner = document.querySelector(`.outer-top-banner .btn-close-banner`);
+  console.log(closeTopBanner);
+
+  let closeBanner= () => {
+    topBanner.style.display = "none";
+  }
+
+  closeTopBanner.addEventListener("click",closeBanner);
+}
+
+
+
 
 let modalCloseEvent =() =>{
   let btnCloseList = document.querySelectorAll(".fn-close-modal");

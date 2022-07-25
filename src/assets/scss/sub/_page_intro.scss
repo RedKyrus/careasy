@@ -29,13 +29,18 @@
     padding-top: 90px;
     padding-bottom: 84px;
     background: linear-gradient(142deg, #700BBF 0%, #8E1096 45%, #92118F 100%);
-    width: 1920px;
+    max-width: 1920px;
+    width: 100%;
   }
   .sect-content{    
     border-radius: 50px;
     overflow: hidden;
-    width: 1265px;
+    max-width: 1265px;
+    width: 100%;
     margin: 0 auto;
+    img{
+      width: 100%
+    }
   }
 }
 
@@ -82,6 +87,7 @@
     .sect-content{    
       border-radius: toRem(50);
       overflow: hidden;
+      width: 100%;
       img{
         width: toRem(666);
       }

@@ -84,7 +84,7 @@ mixin SpecialInfobox02(num, carName, price01=0, price02=0, price03=0)
   if (num < 10)
     -num= "0" + num
   
-  a(class="swiper-slide info-box fn-open-modal-quote" href="#none")
+  a(class="swiper-slide info-box" href="#none")
     div.car-top
       p.car-num #{num}
       p.car-icon: img(src=`${imgPath}/main/icon_special.png`, alt="아이콘")
@@ -92,40 +92,33 @@ mixin SpecialInfobox02(num, carName, price01=0, price02=0, price03=0)
     div.car-info
       p.car-name #{carName}
       ul.car-price-ul
-        li.price-rent
-          p.p-type 렌트
-          p.p-price #{price01}만원~
-        li.price-less 
-          p.p-type 리스
-          p.p-price #{price02}만원~
-          
-        //- li.price-advance
-        //-   p.p-type 선수금 30%
-        //-   p.p-price #{price01.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
-        //- li.price-deposit
-        //-   p.p-type 보증금 30%
-        //-   p.p-price #{price02.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
-        //- li.price-normal
-        //-   p.p-type 무보증
-        //-   p.p-price #{price03.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-advance
+          p.p-type 선수금 30%
+          p.p-price #{price01.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-deposit
+          p.p-type 보증금 30%
+          p.p-price #{price02.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
+        li.price-normal
+          p.p-type 무보증
+          p.p-price #{price03.toString().replace(/\B(?=(\d{3})+(?!\d))/,",")}원
       p.car-tip (세금/보험료 포함)
       button(type="button" class="btn-quote") 견적신청하기
 
 
 mixin slideListSpecial03()
-  +SpecialInfobox02("1","벤츠S클래스","156","94","495110")
-  +SpecialInfobox02("2","BMW 7시리즈","189","108","517800")
-  +SpecialInfobox02("3","벤츠E클래스", "74","41","544000")
-  +SpecialInfobox02("4","포터2","0","14","523500")
-  +SpecialInfobox02("5","그랜저","27","22", "853930","926970")
-  +SpecialInfobox02("6","카니발","28","24", "573650","663080")
-  +SpecialInfobox02("7","스포티지","23","18","548570","594110")
-  +SpecialInfobox02("8","G80","44","40","498410","518700")
-  +SpecialInfobox02("9","GV80","55","40","518700")
-  //- +SpecialInfobox02("9","QM6 2.0 LPG","291200","452000","452000")
-  //- +SpecialInfobox02("10","트레일블레이저","261625","391000","419000")
-  //- +SpecialInfobox02("11","스파크","166800","233000","233000")
-  //- +SpecialInfobox02("12","모닝","207400","291830","292000")
+  +SpecialInfobox02("1","카니발9인승 디젤","276380","457490","495110")
+  +SpecialInfobox02("2","K8 2.5 가솔린","303250","482200","517800")
+  +SpecialInfobox02("3","쏘렌토 1.6 가솔린","281375","497000","544000")
+  +SpecialInfobox02("4","그랜저 2.5 가솔린","287560","481400","523500")
+  +SpecialInfobox02("5","GV80 2.5 터보","502440","853930","926970")
+  +SpecialInfobox02("6","아이오닉 전기차","302950","573650","663080")
+
+  +SpecialInfobox02("7","팰리세이드 2.2 디젤","329430","548570","594110")
+  +SpecialInfobox02("8","스타리아 2.2 11인승","340700","498410","518700")
+  +SpecialInfobox02("9","QM6 2.0 LPG","291200","452000","452000")
+  +SpecialInfobox02("10","트레일블레이저","261625","391000","419000")
+  +SpecialInfobox02("11","스파크","166800","233000","233000")
+  +SpecialInfobox02("12","모닝","207400","291830","292000")
 
 
 mixin slideListSpecial02()
@@ -191,12 +184,8 @@ mixin slideAreaIntro()
         li(class="swiper-slide")
           img(src=`${imgPath}/main/main_intro02.png`, alt="메인 이미지" class="mobile-hidden")
           img(src=`${imgPath}/main/main_intro02_m.png`, alt="메인 이미지 모바일" class="pc-hidden")
-      div(class="slide-navigation intro-navigation-area")
-        button(type="button" class="slide-btn slide-btn-prev")
-          img(src="img/main/btn_arrow_left.png", alt="슬라이드 이전")
-        button(type="button" class="slide-btn slide-btn-next")
-          img(src="img/main/btn_arrow_left.png", alt="슬라이드 다음")
-    //- div(class="slide-pagination intro-paging-area")
+
+    div(class="slide-pagination intro-paging-area")
 
 
 //-==HTML==
@@ -248,33 +237,21 @@ block content
           p(class="title-main")
             img(src=`${imgPath}/main/title_youtube.png`, alt="유튜브 제목")
           p(class="title-sub") 유튜브 채널에서 영상을 통해 다양한 정보를 만나보세요.
-        div(class="youtube-intro")
-          div(class="youtube-area")
-            div(class="youtube-box")
-              <iframe class="youtube-frame" src="https://www.youtube.com/embed/Mjxlo1RQ7ko" title="22년형 GV80이 쓰레기차라고!?? GV80 옵션 알고 타자!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-          div(class="youtube-text-box") 
-            p GV80 옵션
-            p 타고보니 8천만원 쓰레기차
-
         div(class="youtube-contents")
           div(class="youtube-area")
+            //img(src=`${imgPath}/main/youtube_img01.png`, alt="이미지")
             div(class="youtube-box")
-              <iframe class="youtube-frame" src="https://www.youtube.com/embed/yVAqOpj5QOA" title="봉고3 전기차 빨리 살걸~!  봉고3의 매력!!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="youtube-frame" src="https://www.youtube.com/embed/vVfwptqRp_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-            p(class="youtube-text") 봉고3 전기차 빨리 살걸~!
+            p(class="youtube-text") 카니발 구매 영상
             
           div(class="youtube-area mobile-hidden")
+            //img(src=`${imgPath}/main/youtube_img02.png`, alt="이미지")
             div(class="youtube-box")
-              <iframe class="youtube-frame" src="https://www.youtube.com/embed/0SmzwdMzfIY" title="EV6 실차주 장기렌트 솔직후기 및 리뷰 장점, 단점" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="youtube-frame" src="https://www.youtube.com/embed/bQ8M6TaL5oE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
-            p(class="youtube-text") EV6 실차주 장기렌트 솔직후기
-          
-          div(class="youtube-area mobile-hidden")
-            div(class="youtube-box")
-              <iframe class="youtube-frame" src="https://www.youtube.com/embed/j_2agRgA1JQ" title="스포티지 전격비교/ 트렌디 디젤 VS 하이브리드 그래비티" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            p(class="youtube-text") 스포티지 전격비교</br>디젤 VS 하이브리드
+            p(class="youtube-text") 렌터카 차량 인수영상
+             
       
 
 

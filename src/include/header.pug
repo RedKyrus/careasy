@@ -3,15 +3,22 @@ mixin searchList(keyword)
   - keywordCount++
   li: a(href=`http://www.careasy.co.kr/search?search_text=${keyword}`) #{keywordCount}. #{keyword}
 
-header.header 
-  //- div.header-bg
+div(class="outer-top-banner")
+  .top-banner-area   
+    button(class="img-box fn-open-modal-pop-sunting")
+      img(src=`${imgPath}/modal/pop/pop_sunting_topbanner.png`, alt="탑배너바" )
+    button.btn-close-banner
+      img(src=`${imgPath}/modal/pop/btn_close_top_banner.png`, alt="닫기버튼")
 
+
+header.header 
   div.header-top
     //==검색 추가부분==
     div.top-content
       div.top-logo
         a(href=`${basePath}index.html`)
-          img(src=`${imgPath}/common/logo_top.png`, alt="탑로고")
+          img(src=`${imgPath}/common/logo_top.png`, alt="탑로고" class="mobile-hidden")
+          img(src=`${imgPath}/common/logo_top_m.png`, alt="탑로고" class="pc-hidden")
         
       div.search-area
         div.search-bar

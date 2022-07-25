@@ -63,15 +63,57 @@
   margin-top: 70px;   
 }
 
-.youtube-contents{
+.youtube-intro{
   margin-top: 50px;
+  
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #89878a;
+  .youtube-area{
+    position: relative;
+    width: 60%;
+    .youtube-box{
+      position: relative;
+      padding-top: 56.25%;
+      width: 100%;
+      //height: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      .youtube-frame{
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+  }
+  .youtube-text-box{
+    width: 37%;
+    padding-top: 14px;
+    p{
+      text-align: left;
+      color: #747474;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    
+  }
+  
+}
+
+.youtube-contents{
+  margin-top: 40px;
   
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
   .youtube-area{
     position: relative;
-    width: 48%;
+    width: 32.8%;
     //padding-top: 56.25%;
     img{
       width: 100%;
@@ -98,6 +140,7 @@
     padding-top: 22px;
     color: #747474;
     font-size: 24px;
+    line-height: 1.2;
   }
   
 }
@@ -126,8 +169,8 @@
 .sect-intro{
   //background: rgb(2,0,36);
   background: linear-gradient(142deg, #0eaad7 0%, #1c45a9 45%, #231192 100%);
-  padding-top: 70px;
-  padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 120px;
 }
 
 $introBottomSize: 10px;
@@ -144,7 +187,32 @@ $introBottomSize: 10px;
     //background: url("img/main/main_intro.png") no-repeat;
     .intro-ul{
       li{
-        padding-bottom: $introBottomSize;  
+        // padding-bottom: $introBottomSize; 
+        border-radius: 37px 0 0 37px;
+        overflow: hidden;
+      }
+    }
+    .intro-navigation-area{
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 8px;
+      .slide-btn{
+        opacity: 0.6;
+        img{
+          // filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(147deg) brightness(108%) contrast(108%);
+          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(147deg) brightness(108%) contrast(108%) drop-shadow(1px 2px 4px #00000044);
+        }
+        &:hover{
+          opacity: 0.9;
+        }
+      }
+      .slide-btn-next{
+        transform: scaleX(-1);  
       }
     }
 
@@ -277,7 +345,7 @@ $introBottomSize: 10px;
 }
 
 .in-info-content{
-  margin-bottom: $introBottomSize;
+  // margin-bottom: $introBottomSize;
   background-color: #fff;
   width: 362px;
   // box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.3);

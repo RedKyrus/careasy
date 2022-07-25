@@ -17,16 +17,22 @@ let onready = () =>{
     slidesPerGroup: 1,
     autoplay: false,
     allowTouchMove: false,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
-    // // If we need pagination
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    // If we need pagination
     pagination: {
       el: slideIntroPath+'.slide-pagination',
       clickable: true,
       
     },
+    // Navigation arrows
+    navigation: {
+      nextEl: slideIntroPath+'.slide-btn-next',
+      prevEl: slideIntroPath+'.slide-btn-prev',
+    },
+    
 
     grabCursor: true,
     effect: "creative",
@@ -174,12 +180,14 @@ let rearrangementSpecial = function(){
 
     slideSpecial.append(newTag);
     slideSpecial.append(newTag.cloneNode(true));
+    slideSpecial.append(newTag.cloneNode(true));
     let slidePart = slideSpecial.getElementsByClassName("slide-part");
+    console.log(slideSpecial);
     //console.log(slidePart);
     let iNum = 0;
     infoBoxListClone.forEach((item, index)=> {
       //참고:실수형 오차 < Number.EPSILON
-      let iNum = parseInt(index/6);
+      let iNum = parseInt(index/3);
       slidePart[iNum].append(item);
      })
 
