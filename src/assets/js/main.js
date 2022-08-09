@@ -182,7 +182,7 @@ let rearrangementSpecial = function(){
     slideSpecial.append(newTag.cloneNode(true));
     slideSpecial.append(newTag.cloneNode(true));
     let slidePart = slideSpecial.getElementsByClassName("slide-part");
-    console.log(slideSpecial);
+    //console.log(slideSpecial);
     //console.log(slidePart);
     let iNum = 0;
     infoBoxListClone.forEach((item, index)=> {

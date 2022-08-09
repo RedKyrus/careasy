@@ -875,3 +875,109 @@
     }
   }
 }
+
+
+
+
+.modal-pop-porter-bongo{
+  .modal-pop-porter-bongo-cont{
+    width: 539px;
+    position: relative;
+  }
+  .btn-close{
+    z-index: 1;
+    position: absolute;
+    background-color: #131313;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    top: 12px;
+    right: 12px;
+    &::after, &::before{
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      width: 4px;
+      height: 26px;
+      border-radius: 1px;
+      top: 50%;
+      left: 50%;
+      //transform: rotate(45deg);
+    }
+
+    &::after{
+      transform: translate(-50%,-50%) rotate(-45deg);
+    }
+    &::before{
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+  }
+
+  .btn-car-quote{
+    position: absolute;
+    background-color: #3644b2;
+    color: #fff;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    // height: 52px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+    border-radius: 26px;
+    font-size: 27px;
+    font-weight: 500;
+  }
+}
+
+
+@media (max-width:$mobileBaseMaxSize) {
+  .modal-pop-porter-bongo{
+    .modal-pop-porter-bongo-cont{
+      width: 84%;
+      position: relative;
+      .img-area{
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .btn-close{
+      width: toRem(46);
+      height: toRem(46);
+      right: toRem(10);
+      top: toRem(10);
+      &::after, &::before{
+        width: 3px;
+        height: toRem(34);
+        border-radius: 1px;
+        top: 50%;
+        left: 50%;
+        //transform: rotate(45deg);
+      }
+  
+      &::after{
+        transform: translate(-50%,-50%) rotate(-45deg);
+      }
+      &::before{
+        transform: translate(-50%,-50%) rotate(45deg);
+      }
+    }
+
+    .btn-car-quote{
+      bottom: toRem(26);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 58%;
+      // height: 52px;
+      padding-top: toRem(18);
+      padding-bottom: toRem(22);
+      border-radius: toRem(26);
+      font-size: toRem(34);
+    }
+  }
+
+  
+}

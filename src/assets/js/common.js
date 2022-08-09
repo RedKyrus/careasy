@@ -1,16 +1,3 @@
-//i===== ie 11
-if ('NodeList' in window && !NodeList.prototype.forEach) {
-  console.info('polyfill for IE11');
-  NodeList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i < this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
-  };
-}
-//=======
-
-
 window.addEventListener('DOMContentLoaded', () =>{
 
   modalOpenEvent("agree");
@@ -20,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("review");
   modalOpenEvent("terms");
   modalOpenEvent("pop-sunting");
+  modalOpenEvent("pop-porter-bongo", true);
 
   topBannerSetting();
 
@@ -41,12 +29,12 @@ window.addEventListener('load',()=>{
 
 
 
-let modalOpenEvent = (modalname) =>{
+let modalOpenEvent = (modalname, startOpen=false) =>{
   let btnOpenList = document.querySelectorAll(`.fn-open-modal-${modalname}`);
-  let tagetModal = document.querySelector(`.modal-${modalname}`);
+  let targetModal = document.querySelector(`.modal-${modalname}`);
   
   let openModal= () =>{
-    tagetModal.classList.add("modal-show");
+    targetModal.classList.add("modal-show");
     document.body.classList.add("modal-open-scroll-stop")
     //console.log(modalname, "작동");
   }
@@ -55,13 +43,19 @@ let modalOpenEvent = (modalname) =>{
     btn.addEventListener("click", openModal);
   });
 
+  if(startOpen === true){
+    if(btnOpenList === null) return;
+    if(targetModal === null) return;
+    openModal();
+  }
+
 }
 
 
 let topBannerSetting = () =>{
   let topBanner = document.querySelector(`.outer-top-banner`);
   let closeTopBanner = document.querySelector(`.outer-top-banner .btn-close-banner`);
-  console.log(closeTopBanner);
+  // console.log(closeTopBanner);
 
   let closeBanner= () => {
     topBanner.style.display = "none";
