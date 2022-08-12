@@ -7,11 +7,14 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("review");
   modalOpenEvent("terms");
   modalOpenEvent("pop-sunting");
-  modalOpenEvent("pop-porter-bongo", true);
+  // modalOpenEvent("pop-porter-bongo", true);
+  // modalOpenEvent("pop-g90", true);
 
   topBannerSetting();
 
   modalCloseEvent();
+
+  modalCloseListEvent()
 
   topAdCloseEvent();
 
@@ -46,6 +49,7 @@ let modalOpenEvent = (modalname, startOpen=false) =>{
   if(startOpen === true){
     if(btnOpenList === null) return;
     if(targetModal === null) return;
+    if(targetModal === null) return;
     openModal();
   }
 
@@ -72,9 +76,9 @@ let modalCloseEvent =() =>{
   //btnClose.closest(".modal-wrap");
   
   btnCloseList.forEach(btn =>{
-    let tagetModal = btn.closest(".modal-wrap");
+    let targetModal = btn.closest(".modal-wrap");
     btn.addEventListener("click", ()=>{
-      tagetModal.classList.remove("modal-show");
+      targetModal.classList.remove("modal-show");
       let isShowModal = document.querySelector(".modal-show");
       if(isShowModal == null){
         document.body.classList.remove("modal-open-scroll-stop")
@@ -84,6 +88,43 @@ let modalCloseEvent =() =>{
   });
   
 }
+
+
+//두개 이상
+let modalListCount = 0;
+let modalCloseListEvent = () =>{
+
+  //정지
+  document.body.classList.add("modal-open-scroll-stop")
+
+  let modalWrap = document.querySelector(".modal-wrap-list");
+  let btnCloseList = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list");
+  let btnCloseListAll = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list-all");
+  
+  btnCloseList.forEach(btn => {
+    let targetModal = btn.closest(".modal-list-target");
+    btn.addEventListener("click", ()=>{
+      targetModal.classList.add("modal-hidden");
+      modalListCount++;
+      if(modalListCount >= 2){
+        // targetModal.classList.add("modal-hidden");
+        modalWrap.classList.add("modal-hidden")
+        document.body.classList.remove("modal-open-scroll-stop")
+      }
+    });
+
+  });
+
+  btnCloseListAll.forEach(btn =>{
+    btn.addEventListener("click", ()=>{
+
+      modalWrap.classList.add("modal-hidden")
+    });
+  });
+  
+
+}
+
 
 let topAdCloseEvent =() =>{
   let topAd = document.querySelector(".top-ad");
@@ -175,8 +216,8 @@ let rankBoxEvent = () =>{
   const rankBox = document.querySelector(".open-rank-target");
   const btnClose = document.querySelector(".open-rank-target .btn-close-rank");
 
-  btnOpen.addEventListener("click",openBox);
-  btnClose.addEventListener("click",closeBox);
+  btnOpen.addEventListener("click", openBox);
+  btnClose.addEventListener("click", closeBox);
 
   function openBox(){
     rankBox.classList.add("rank-show");

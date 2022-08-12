@@ -2,6 +2,10 @@
   display: block !important;
 }
 
+.modal-hidden{
+  display: none !important;
+}
+
 .modal-open-scroll-stop{
     overflow: hidden;
 }
@@ -980,4 +984,157 @@
   }
 
   
+}
+
+
+.modal-wrap-list{
+  // display: none;
+  z-index: 30;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000, $alpha: 0.5);
+  top: 0;
+  .modal-list-ul{
+    position: relative;
+    margin: 0 auto;
+    // top: 50%;
+    // transform: translateY(-50%);
+    width: 0;
+    height: 100%;
+    li{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .btn-close{
+        z-index: 1;
+        position: absolute;
+        background-color: #131313;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 34px;
+        height: 34px;
+        display: inline-block;
+        top: 12px;
+        right: 12px;
+        &::after, &::before{
+          content: "";
+          position: absolute;
+          background-color: #fff;
+          width: 4px;
+          height: 26px;
+          border-radius: 1px;
+          top: 50%;
+          left: 50%;
+          //transform: rotate(45deg);
+        }
+    
+        &::after{
+          transform: translate(-50%,-50%) rotate(-45deg);
+        }
+        &::before{
+          transform: translate(-50%,-50%) rotate(45deg);
+        }
+      }
+
+      .btn-car-quote{
+        position: absolute;
+        background-color: #3644b2;
+        color: #fff;
+        bottom: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 230px;
+        // height: 52px;
+        padding-top: 12px;
+        padding-bottom: 16px;
+        border-radius: 26px;
+        font-size: 27px;
+        font-weight: 500;
+      }
+
+    }
+
+    .modal-list-porter-bongo{
+      right: 80px;
+    }
+    .modal-list-g90{
+      left: 30px;
+    }
+
+  }
+}
+
+
+@media (max-width:$mobileBaseMaxSize) {
+  .modal-wrap-list{
+    .modal-list-ul{
+      position: relative;
+      margin: 0 auto;
+      // top: 50%;
+      // transform: translateY(-50%);
+      width: 100%;
+      height: 100%;
+      li{
+        position: absolute;
+        
+        width: 88%;
+        .img-area{
+          img{
+            width: 100%;
+          }
+        }
+  
+        .btn-close{
+          width: toRem(46);
+          height: toRem(46);
+          right: toRem(10);
+          top: toRem(10);
+          &::after, &::before{
+            width: 3px;
+            height: toRem(34);
+            border-radius: 1px;
+            top: 50%;
+            left: 50%;
+            //transform: rotate(45deg);
+          }
+      
+          &::after{
+            transform: translate(-50%,-50%) rotate(-45deg);
+          }
+          &::before{
+            transform: translate(-50%,-50%) rotate(45deg);
+          }
+        }
+    
+        .btn-car-quote{
+          bottom: toRem(26);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 58%;
+          // height: 52px;
+          padding-top: toRem(18);
+          padding-bottom: toRem(22);
+          border-radius: toRem(26);
+          font-size: toRem(34);
+        }
+  
+      }
+  
+      .modal-list-porter-bongo{
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+      .modal-list-g90{
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+  
+    }
+  }
+  
+
 }

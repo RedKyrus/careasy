@@ -315,6 +315,21 @@ block content
   
 
   
+  mixin modalListFrame(modalName, imgName)
+    li(class=`modal-list-target modal-list-${modalName}`)
+      button(type="button" class="btn-close fn-close-modal-list")
+      .img-area
+        img(src=`${imgPath}/modal/pop/${imgName}`)
+      
+      button(type="button" class="btn-car-quote fn-close-modal-list-all fn-open-modal-quote") 문의하기
+
+
+
+  //이달의 즉시출고차량 팝업(포터/봉고/g90)
+  div.modal-wrap-list
+    ul.modal-list-ul
+      +modalListFrame("porter-bongo",'pop_porter_bongo.png')
+      +modalListFrame("g90",'pop_g90.png')
 
 
   //- script(src="static/js/main.js")

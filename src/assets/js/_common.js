@@ -8,13 +8,11 @@ window.addEventListener('DOMContentLoaded', () =>{
   modalOpenEvent("terms");
   modalOpenEvent("pop-sunting");
   // modalOpenEvent("pop-porter-bongo", true);
-  // modalOpenEvent("pop-g90", true);
+  modalOpenEvent("pop-g90", true);
 
   topBannerSetting();
 
   modalCloseEvent();
-
-  modalCloseListEvent()
 
   topAdCloseEvent();
 
@@ -90,39 +88,16 @@ let modalCloseEvent =() =>{
 }
 
 
+
+
 //두개 이상
-let modalListCount = 0;
-let modalCloseListEvent = () =>{
+let modalLinkCount = 0;
+let modalCloseLinkEvent = () =>{
+  let btnCloseList = document.querySelectorAll(".fn-close-modal-link")
 
-  //정지
-  document.body.classList.add("modal-open-scroll-stop")
-
-  let modalWrap = document.querySelector(".modal-wrap-list");
-  let btnCloseList = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list");
-  let btnCloseListAll = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list-all");
-  
-  btnCloseList.forEach(btn => {
-    let targetModal = btn.closest(".modal-list-target");
-    btn.addEventListener("click", ()=>{
-      targetModal.classList.add("modal-hidden");
-      modalListCount++;
-      if(modalListCount >= 2){
-        // targetModal.classList.add("modal-hidden");
-        modalWrap.classList.add("modal-hidden")
-        document.body.classList.remove("modal-open-scroll-stop")
-      }
-    });
-
-  });
-
-  btnCloseListAll.forEach(btn =>{
-    btn.addEventListener("click", ()=>{
-
-      modalWrap.classList.add("modal-hidden")
-    });
-  });
-  
-
+  // btnCloseList.forEach(btn => {
+  //   btn.dataset.link_id;
+  // });
 }
 
 
