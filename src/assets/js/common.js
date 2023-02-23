@@ -95,11 +95,16 @@ let modalListCount = 0;
 let modalCloseListEvent = () =>{
 
   //정지
-  document.body.classList.add("modal-open-scroll-stop")
+  // document.body.classList.add("modal-open-scroll-stop")
 
   let modalWrap = document.querySelector(".modal-wrap-list");
   let btnCloseList = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list");
   let btnCloseListAll = document.querySelectorAll(".modal-wrap-list .fn-close-modal-list-all");
+
+   //있으면 정지
+   if(modalWrap !== null){
+    document.body.classList.add("modal-open-scroll-stop")
+  }
   
   btnCloseList.forEach(btn => {
     let targetModal = btn.closest(".modal-list-target");
